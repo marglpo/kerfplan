@@ -1,0 +1,445 @@
+{
+  "@@locale": "en",
+  "appName": "KerfPlan",
+  "homeTitle": "KerfPlan",
+  "settingsTitle": "Settings",
+  "newCutList": "New Cut List",
+  "noProjectsTitle": "No cut lists yet",
+  "noProjectsMessage": "Plan your first job in under a minute.",
+  "appVersionLabel": "App version",
+  "defaultUnits": "Default units",
+  "defaultKerf": "Default kerf",
+  "theme": "Theme",
+  "newProjectTitle": "New cut list",
+  "projectNameLabel": "Project name",
+  "projectNameHint": "Garage frame",
+  "materialLabel": "Material",
+  "materialHint": "40x20 steel",
+  "noteLabel": "Note",
+  "noteHint": "South wall",
+  "createCutList": "Create Cut List",
+  "save": "Save",
+  "editDetails": "Edit details",
+  "duplicate": "Duplicate",
+  "copyLabel": "Copy",
+  "@copyLabel": {"description": "Suffix for automatically generated duplicate project names."},
+  "delete": "Delete",
+  "deleteProjectTitle": "Delete cut list?",
+  "deleteProjectMessage": "This permanently deletes \"{projectName}\" from this device.",
+  "@deleteProjectMessage": {"placeholders": {"projectName": {"type": "String"}}},
+  "cancel": "Cancel",
+  "projectDeleted": "Cut list deleted",
+  "projectActions": "Actions for {projectName}",
+  "@projectActions": {"placeholders": {"projectName": {"type": "String"}}},
+  "updatedLabel": "Updated {date}",
+  "@updatedLabel": {"placeholders": {"date": {"type": "String"}}},
+  "stockSectionTitle": "Stock",
+  "noStockYet": "No stock lengths added yet.",
+  "partsSectionTitle": "Parts",
+  "noPartsYet": "No parts added yet.",
+  "cutSettingsSectionTitle": "Cut settings",
+  "calculate": "Calculate",
+  "calculateDisabledHint": "Add parts to calculate a cut plan.",
+  "projectNotFound": "Cut list not found",
+  "backToProjects": "Back to projects",
+  "projectNameRequired": "Enter a project name.",
+  "projectNameTooLong": "Project name must be 80 characters or fewer.",
+  "materialTooLong": "Material must be 120 characters or fewer.",
+  "noteTooLong": "Note must be 500 characters or fewer.",
+  "projectSaveError": "Couldn’t save the cut list. Try again.",
+  "projectDeleteError": "Couldn’t delete the cut list. Try again.",
+  "projectDuplicateError": "Couldn’t duplicate the cut list. Try again.",
+  "projectsLoadError": "Couldn’t load your cut lists.",
+  "projectLoadError": "Couldn’t load this cut list.",
+  "retry": "Retry",
+  "fixedInventory": "Fixed inventory",
+  "buyStock": "Buy stock",
+  "addStockLength": "Add stock length",
+  "editStockLength": "Edit stock length",
+  "stockLength": "Length",
+  "quantity": "Quantity",
+  "labelOptional": "Label (optional)",
+  "stockLengthHint": "6000",
+  "stockLabelHint": "Warehouse",
+  "quantityHint": "10",
+  "stockLengthRequired": "Enter a length.",
+  "stockLengthInvalid": "Enter a number greater than zero.",
+  "stockLengthPrecision": "This value cannot be stored exactly. Use a length that is a multiple of 0.0001 mm.",
+  "stockLengthTooLarge": "This length is too large.",
+  "quantityRequired": "Enter a quantity.",
+  "quantityInvalid": "Enter a whole number from 1 to 9999.",
+  "quantityTooLarge": "Quantity must be 9999 or fewer.",
+  "stockLabelTooLong": "Label must be 80 characters or fewer.",
+  "saveStock": "Save stock length",
+  "stockSaveError": "Couldn’t save this stock length. Try again.",
+  "stockDeleteError": "Couldn’t delete this stock length. Try again.",
+  "stockDuplicateError": "Couldn’t duplicate this stock length. Try again.",
+  "stockLoadError": "Couldn’t load stock.",
+  "stockNotFound": "Stock length not found",
+  "deleteStockTitle": "Delete stock length?",
+  "deleteStockMessage": "{length} × {quantity} will be removed from this cut list.",
+  "@deleteStockMessage": {"placeholders": {"length": {"type": "String"}, "quantity": {"type": "int"}}},
+  "stockDeleted": "Stock length deleted",
+  "duplicateStock": "Duplicate stock length",
+  "stockSummary": "{count, plural, =1{1 stock length} other{{count} stock lengths}}",
+  "@stockSummary": {"placeholders": {"count": {"type": "int"}}},
+  "totalPieces": "{count, plural, =1{1 total piece} other{{count} total pieces}}",
+  "@totalPieces": {"placeholders": {"count": {"type": "int"}}},
+  "setBuyStockLength": "Set stock length",
+  "buyStockHelper": "We’ll calculate how many pieces you need.",
+  "buyStockLengthMissing": "Set the stock length you plan to buy.",
+  "stockModeSaveError": "Couldn’t change stock mode. Try again.",
+  "backToProject": "Back to cut list",
+  "decreaseQuantity": "Decrease quantity",
+  "increaseQuantity": "Increase quantity",
+  "unitMm": "mm",
+  "unitCm": "cm",
+  "unitM": "m",
+  "unitInch": "in",
+  "lengthWithUnit": "{value} {unit}",
+  "@lengthWithUnit": {"placeholders": {"value": {"type": "String"}, "unit": {"type": "String"}}},
+  "approximateLength": "≈ {value}",
+  "@approximateLength": {"placeholders": {"value": {"type": "String"}}},
+  "stockQuantity": "× {quantity}",
+  "@stockQuantity": {"placeholders": {"quantity": {"type": "int"}}},
+  "stockActions": "Actions for {length}",
+  "@stockActions": {"placeholders": {"length": {"type": "String"}}},
+  "decimalInchesHelper": "Enter decimal inches.",
+  "exactStoredLengthHelper": "Stored exactly: {value} mm. The inch display is approximate. The saved length stays exact unless you edit it.",
+  "@exactStoredLengthHelper": {"placeholders": {"value": {"type": "String"}}},
+  "addPart": "Add part",
+  "editPart": "Edit part",
+  "partNameOptional": "Part name (optional)",
+  "partNameHint": "Upright",
+  "partNameTooLong": "Part name must be 100 characters or fewer.",
+  "partSaveError": "Couldn’t save this part. Try again.",
+  "partDeleteError": "Couldn’t delete this part. Try again.",
+  "partDuplicateError": "Couldn’t duplicate this part. Try again.",
+  "partLoadError": "Couldn’t load parts.",
+  "partNotFound": "Part not found",
+  "deletePartTitle": "Delete part?",
+  "deletePartMessage": "{description} × {quantity} will be removed from this cut list.",
+  "partDeleted": "Part deleted",
+  "duplicatePart": "Duplicate part",
+  "partSummary": "{count, plural, =1{1 part line} other{{count} part lines}}",
+  "feet": "Feet",
+  "inches": "Inches",
+  "wholeInches": "Whole inches",
+  "fraction": "Fraction",
+  "inchesRange": "Use 0 to 11 inches. Enter additional feet in the Feet field.",
+  "imperialLengthInvalid": "Enter whole numbers of zero or more and a fraction, totaling more than zero.",
+  "partTooLongWarning": "This part is longer than your largest usable stock length ({length}).",
+  "addStockToContinue": "Add stock to continue.",
+  "cutPlanUnavailable": "Cut plan isn’t available yet.",
+  "namedPartLength": "{name} — {length}",
+  "@deletePartMessage": {
+    "placeholders": {
+      "description": {
+        "type": "String"
+      },
+      "quantity": {
+        "type": "int"
+      }
+    }
+  },
+  "@namedPartLength": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "length": {
+        "type": "String"
+      }
+    }
+  },
+  "@partSummary": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "@partTooLongWarning": {
+    "placeholders": {
+      "length": {
+        "type": "String"
+      }
+    }
+  },
+  "cutPlanTitle": "Cut plan",
+  "calculating": "Calculating\u2026",
+  "recalculate": "Recalculate",
+  "editCutList": "Edit cut list",
+  "stockPiecesUsed": "{count, plural, =1{1 stock piece used} other{{count} stock pieces used}}",
+  "stockPiecesToBuy": "{count, plural, =1{1 stock piece to buy} other{{count} stock pieces to buy}}",
+  "buySummary": "Buy {length} \u00d7 {count}",
+  "requestedParts": "Requested parts",
+  "placedParts": "Placed parts",
+  "unplacedParts": "Unplaced parts",
+  "placedOfRequested": "Placed {placed} of {requested} parts",
+  "totalFinishedLength": "Total finished length",
+  "totalStockUsed": "Total stock used",
+  "totalWaste": "Total waste",
+  "wastePercentage": "Waste: {value}%",
+  "reusableLeftovers": "Reusable leftovers",
+  "scrap": "Scrap",
+  "kerfLoss": "Kerf loss",
+  "trimLoss": "Trim loss",
+  "reusable": "Reusable",
+  "leftover": "Leftover",
+  "reusableExplanation": "Reusable: tail leftovers at least {threshold}. Scrap includes kerf, trim, and shorter leftovers.",
+  "resultMetric": "{label}: {value}",
+  "barTitle": "Bar {number} \u00b7 {length}",
+  "partsOnBar": "{count, plural, =1{1 part} other{{count} parts}}",
+  "classifiedLeftover": "{length} \u00b7 {classification}",
+  "cutOrderPart": "{number}. {description}",
+  "endTrimPerEnd": "End trim: {length} each end",
+  "barDiagramDescription": "Stock bar {number}, {length}, {parts}, leftover {tail}.",
+  "unplacedCount": "Unplaced parts ({count})",
+  "lengthQuantity": "{length} \u00d7 {quantity}",
+  "inventoryExhaustedResultReason": "Not enough stock remains to place this part.",
+  "resultLoadError": "Couldn\u2019t calculate this cut list.",
+  "resultValidationError": "Check stock, parts, and cut settings before calculating.",
+  "stockTooShortAfterTrim": "Stock is too short after end trim.",
+  "validBuyStockRequired": "Set a valid stock length before calculating.",
+  "tooLongResultReason": "This part is longer than the largest usable stock length.",
+  "@stockPiecesUsed": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "@stockPiecesToBuy": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "@buySummary": {
+    "placeholders": {
+      "length": {
+        "type": "String"
+      },
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "@placedOfRequested": {
+    "placeholders": {
+      "placed": {
+        "type": "int"
+      },
+      "requested": {
+        "type": "int"
+      }
+    }
+  },
+  "@wastePercentage": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "@reusableExplanation": {
+    "placeholders": {
+      "threshold": {
+        "type": "String"
+      }
+    }
+  },
+  "@resultMetric": {
+    "placeholders": {
+      "label": {
+        "type": "String"
+      },
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "@barTitle": {
+    "placeholders": {
+      "number": {
+        "type": "int"
+      },
+      "length": {
+        "type": "String"
+      }
+    }
+  },
+  "@partsOnBar": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "@classifiedLeftover": {
+    "placeholders": {
+      "length": {
+        "type": "String"
+      },
+      "classification": {
+        "type": "String"
+      }
+    }
+  },
+  "@cutOrderPart": {
+    "placeholders": {
+      "number": {
+        "type": "int"
+      },
+      "description": {
+        "type": "String"
+      }
+    }
+  },
+  "@endTrimPerEnd": {
+    "placeholders": {
+      "length": {
+        "type": "String"
+      }
+    }
+  },
+  "@barDiagramDescription": {
+    "placeholders": {
+      "number": {
+        "type": "int"
+      },
+      "length": {
+        "type": "String"
+      },
+      "parts": {
+        "type": "String"
+      },
+      "tail": {
+        "type": "String"
+      }
+    }
+  },
+  "@unplacedCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "@lengthQuantity": {
+    "placeholders": {
+      "length": {
+        "type": "String"
+      },
+      "quantity": {
+        "type": "int"
+      }
+    }
+  },
+  "editCutSettings": "Edit cut settings",
+  "units": "Units",
+  "unitFtIn": "ft + in",
+  "millimeters": "Millimeters",
+  "centimeters": "Centimeters",
+  "meters": "Meters",
+  "feetAndInches": "Feet and inches",
+  "kerf": "Kerf",
+  "kerfHelper": "Material removed between consecutive parts.",
+  "kerfFinalPartHelper": "No kerf is added after the final part on a stock piece.",
+  "endTrimEachEnd": "End trim (each end)",
+  "endTrimHelper": "Trim this length from each end of every stock piece.",
+  "reusableLeftover": "Reusable leftover",
+  "reusableLeftoverHelper": "Leftovers at or above this length are counted as reusable.",
+  "cutSettingsSaveError": "Couldn\u2019t save cut settings. Try again.",
+  "noUsableStockAfterTrim": "No usable stock length remains after end trim.",
+  "someStockUnusableAfterTrim": "Some stock pieces are too short after end trim.",
+  "nonnegativeLengthInvalid": "Enter a number greater than or equal to zero.",
+  "nonnegativeImperialInvalid": "Enter whole numbers of zero or more and a fraction.",
+  "share": "Share",
+  "shareCutPlan": "Share cut plan",
+  "shareText": "Share text",
+  "sharePdf": "Share PDF",
+  "copyBuyList": "Copy buy list",
+  "buyListCopied": "Buy list copied",
+  "creatingPdf": "Creating PDF\u2026",
+  "pdfCreateError": "Couldn\u2019t create the PDF. Try again.",
+  "shareError": "Couldn\u2019t share the cut plan. Try again.",
+  "buyListCopyError": "Couldn\u2019t copy the buy list. Try again.",
+  "reportSummary": "Summary",
+  "reportPurchase": "Purchase",
+  "generatedLabel": "Generated",
+  "generatedBy": "Generated by {appName}",
+  "@generatedBy": {
+    "placeholders": {
+      "appName": {
+        "type": "String"
+      }
+    }
+  },
+  "verifyBeforeCutting": "Cut plans are planning aids. Verify each measurement on the stock before cutting and follow tool safety procedures.",
+  "reportFileFallback": "Cut Plan",
+  "addLeftoversToStock": "Add leftovers to stock",
+  "addLeftoversTitle": "Add leftovers to stock?",
+  "addLeftoversMessage": "These reusable leftovers will be added to this project's Fixed Inventory for future cut plans.",
+  "addLeftoversFutureHint": "Add them after the cuts are complete.",
+  "addToStock": "Add to stock",
+  "leftoversAddedToStock": "Reusable leftovers added to stock for future cut plans.",
+  "leftoversAddError": "Couldn\u2019t add leftovers to stock. Try again.",
+  "reusablePieces": "{count, plural, =1{1 reusable piece} other{{count} reusable pieces}}",
+  "@reusablePieces": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "saveAndAddAnother": "Save & add another",
+  "defaultsSectionTitle": "Defaults",
+  "appearanceSectionTitle": "Appearance",
+  "defaultReusableLeftover": "Default reusable leftover",
+  "newProjectsDefaultsHelper": "These values are used when you create a new cut list. Existing cut lists are not changed.",
+  "defaultReusableHelper": "Leftovers at or above this length are counted as reusable in new projects.",
+  "themeSystem": "System",
+  "themeLight": "Light",
+  "themeDark": "Dark",
+  "settingsSaveError": "Couldn\u2019t save settings. Try again.",
+  "settingsLoadError": "Couldn\u2019t load settings.",
+  "settingsSaved": "Settings saved",
+  "proTitle": "KerfPlan Pro",
+  "upgradeOnce": "Upgrade once. Keep it for good.",
+  "noSubscription": "No subscription.",
+  "lifetimePro": "Lifetime Pro",
+  "removeAds": "Remove Ads",
+  "unlockLifetimePro": "Unlock Lifetime Pro — {price}",
+  "@unlockLifetimePro": {"placeholders": {"price": {"type": "String"}}},
+  "removeAdsCta": "Remove Ads — {price}",
+  "@removeAdsCta": {"placeholders": {"price": {"type": "String"}}},
+  "proActive": "Lifetime Pro active",
+  "adFreeActive": "Ad-free",
+  "includedWithPro": "Included with Lifetime Pro",
+  "removeAdsDescription": "Keep the free features and remove advertising.",
+  "restorePurchases": "Restore purchases",
+  "restoringPurchases": "Restoring purchases…",
+  "purchasesRestored": "Purchases restored",
+  "lifetimeProRestored": "Lifetime Pro restored",
+  "adFreeRestored": "Ad-free restored",
+  "nothingToRestore": "Nothing to restore",
+  "purchasePending": "Purchase pending",
+  "purchasePendingMessage": "Your purchase is waiting for Google Play to complete payment.",
+  "purchaseError": "Couldn’t complete the purchase. Try again.",
+  "restoreError": "Couldn’t restore purchases. Try again.",
+  "billingUnavailable": "Purchases are unavailable right now.",
+  "productUnavailable": "Temporarily unavailable.",
+  "processingPurchase": "Verifying purchase…",
+  "purchaseVerified": "Purchase verified",
+  "kerfPlanFree": "KerfPlan Free",
+  "viewPro": "View Pro",
+  "upgrade": "Upgrade",
+  "benefitUnlimitedProjects": "Unlimited cut lists",
+  "benefitMultipleStocks": "Multiple stock lengths",
+  "benefitPdf": "Workshop PDF export",
+  "benefitReuseLeftovers": "Reuse leftovers",
+  "benefitNoAds": "No ads"
+}

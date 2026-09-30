@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1064914829117",
+    "project_id": "kerfplan",
+    "storage_bucket": "kerfplan.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1064914829117:android:8240694f01d417354e4f54",
+        "android_client_info": {
+          "package_name": "com.kerfplan.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBiVaFi6BEULzmITz5dARJ1aO_qOUHCctw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
