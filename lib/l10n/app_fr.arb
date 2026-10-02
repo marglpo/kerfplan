@@ -1,0 +1,557 @@
+{
+  "@@locale": "fr",
+  "appName": "KerfPlan",
+  "homeTitle": "KerfPlan",
+  "settingsTitle": "Paramètres",
+  "newCutList": "Nouvelle liste de coupe",
+  "noProjectsTitle": "Aucune liste de coupe",
+  "noProjectsMessage": "Préparez votre premier chantier en moins d'une minute.",
+  "appVersionLabel": "Version de l'application",
+  "defaultUnits": "Unités par défaut",
+  "defaultKerf": "Trait de scie par défaut",
+  "theme": "Thème",
+  "newProjectTitle": "Nouvelle liste de coupe",
+  "projectNameLabel": "Nom du projet",
+  "projectNameHint": "Cadre du garage",
+  "materialLabel": "Matériau",
+  "materialHint": "Acier 40x20",
+  "noteLabel": "Note",
+  "noteHint": "Mur sud",
+  "createCutList": "Créer la liste de coupe",
+  "save": "Enregistrer",
+  "editDetails": "Modifier les détails",
+  "duplicate": "Dupliquer",
+  "copyLabel": "Copie",
+  "@copyLabel": {
+    "description": "Suffix for automatically generated duplicate project names."
+  },
+  "delete": "Supprimer",
+  "deleteProjectTitle": "Supprimer la liste de coupe ?",
+  "deleteProjectMessage": "« {projectName} » sera définitivement supprimé de cet appareil.",
+  "@deleteProjectMessage": {
+    "placeholders": {
+      "projectName": {
+        "type": "String"
+      }
+    }
+  },
+  "cancel": "Annuler",
+  "projectDeleted": "Liste de coupe supprimée",
+  "projectActions": "Actions pour {projectName}",
+  "@projectActions": {
+    "placeholders": {
+      "projectName": {
+        "type": "String"
+      }
+    }
+  },
+  "updatedLabel": "Mis à jour : {date}",
+  "@updatedLabel": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "stockSectionTitle": "Barres disponibles",
+  "noStockYet": "Aucune longueur de barre ajoutée.",
+  "partsSectionTitle": "Pièces",
+  "noPartsYet": "Aucune pièce ajoutée.",
+  "cutSettingsSectionTitle": "Paramètres de coupe",
+  "calculate": "Calculer",
+  "calculateDisabledHint": "Ajoutez des pièces pour calculer un plan de coupe.",
+  "projectNotFound": "Liste de coupe introuvable",
+  "backToProjects": "Retour aux listes",
+  "projectNameRequired": "Saisissez un nom de projet.",
+  "projectNameTooLong": "Le nom du projet doit contenir au maximum 80 caractères.",
+  "materialTooLong": "Le matériau doit contenir au maximum 120 caractères.",
+  "noteTooLong": "La note doit contenir au maximum 500 caractères.",
+  "projectSaveError": "Impossible d'enregistrer la liste de coupe. Réessayez.",
+  "projectDeleteError": "Impossible de supprimer la liste de coupe. Réessayez.",
+  "projectDuplicateError": "Impossible de dupliquer la liste de coupe. Réessayez.",
+  "projectsLoadError": "Impossible de charger vos listes de coupe.",
+  "projectLoadError": "Impossible de charger cette liste de coupe.",
+  "retry": "Réessayer",
+  "fixedInventory": "Stock disponible",
+  "buyStock": "Acheter des barres",
+  "addStockLength": "Ajouter une longueur de barre",
+  "editStockLength": "Modifier une longueur de barre",
+  "stockLength": "Longueur",
+  "quantity": "Quantité",
+  "labelOptional": "Étiquette (facultative)",
+  "stockLengthHint": "6000",
+  "stockLengthCmHint": "244",
+  "stockLengthMHint": "2,4",
+  "stockLabelHint": "Entrepôt",
+  "quantityHint": "10",
+  "stockLengthRequired": "Saisissez une longueur.",
+  "stockLengthInvalid": "Saisissez un nombre supérieur à zéro.",
+  "stockLengthPrecision": "Cette valeur ne peut pas être enregistrée exactement. Utilisez un multiple de 0,0001 mm.",
+  "stockLengthTooLarge": "Cette longueur est trop grande.",
+  "quantityRequired": "Saisissez une quantité.",
+  "quantityInvalid": "Saisissez un nombre entier de 1 à 9999.",
+  "quantityTooLarge": "La quantité ne doit pas dépasser 9999.",
+  "stockLabelTooLong": "L'étiquette doit contenir au maximum 80 caractères.",
+  "saveStock": "Enregistrer la longueur de barre",
+  "stockSaveError": "Impossible d'enregistrer cette longueur de barre. Réessayez.",
+  "stockDeleteError": "Impossible de supprimer cette longueur de barre. Réessayez.",
+  "stockDuplicateError": "Impossible de dupliquer cette longueur de barre. Réessayez.",
+  "stockLoadError": "Impossible de charger les barres disponibles.",
+  "stockNotFound": "Longueur de barre introuvable",
+  "deleteStockTitle": "Supprimer la longueur de barre ?",
+  "deleteStockMessage": "{length} × {quantity} sera retiré de cette liste de coupe.",
+  "@deleteStockMessage": {
+    "placeholders": {
+      "length": {
+        "type": "String"
+      },
+      "quantity": {
+        "type": "int"
+      }
+    }
+  },
+  "stockDeleted": "Longueur de barre supprimée",
+  "duplicateStock": "Dupliquer la longueur de barre",
+  "stockSummary": "{count, plural, =1{1 longueur de barre} other{{count} longueurs de barre}}",
+  "@stockSummary": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "totalPieces": "{count, plural, =1{1 pièce au total} other{{count} pièces au total}}",
+  "@totalPieces": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "setBuyStockLength": "Définir la longueur de barre",
+  "buyStockHelper": "Nous calculerons combien de barres acheter.",
+  "buyStockLengthMissing": "Indiquez la longueur des barres à acheter.",
+  "stockModeSaveError": "Impossible de changer le mode de stock. Réessayez.",
+  "backToProject": "Retour à la liste de coupe",
+  "decreaseQuantity": "Diminuer la quantité",
+  "increaseQuantity": "Augmenter la quantité",
+  "unitMm": "mm",
+  "unitCm": "cm",
+  "unitM": "m",
+  "unitInch": "in",
+  "lengthWithUnit": "{value} {unit}",
+  "@lengthWithUnit": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      },
+      "unit": {
+        "type": "String"
+      }
+    }
+  },
+  "approximateLength": "≈ {value}",
+  "@approximateLength": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "stockQuantity": "× {quantity}",
+  "@stockQuantity": {
+    "placeholders": {
+      "quantity": {
+        "type": "int"
+      }
+    }
+  },
+  "stockActions": "Actions pour {length}",
+  "@stockActions": {
+    "placeholders": {
+      "length": {
+        "type": "String"
+      }
+    }
+  },
+  "decimalInchesHelper": "Saisissez une valeur décimale en pouces.",
+  "exactStoredLengthHelper": "Valeur exacte enregistrée : {value} mm. L'affichage en pouces est approximatif. La longueur enregistrée reste exacte tant que vous ne la modifiez pas.",
+  "@exactStoredLengthHelper": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "addPart": "Ajouter une pièce",
+  "editPart": "Modifier la pièce",
+  "partNameOptional": "Nom de la pièce (facultatif)",
+  "partNameHint": "Montant",
+  "partNameTooLong": "Le nom de la pièce doit contenir au maximum 100 caractères.",
+  "partSaveError": "Impossible d'enregistrer cette pièce. Réessayez.",
+  "partDeleteError": "Impossible de supprimer cette pièce. Réessayez.",
+  "partDuplicateError": "Impossible de dupliquer cette pièce. Réessayez.",
+  "partLoadError": "Impossible de charger les pièces.",
+  "partNotFound": "Pièce introuvable",
+  "deletePartTitle": "Supprimer la pièce ?",
+  "deletePartMessage": "{description} × {quantity} sera retiré de cette liste de coupe.",
+  "partDeleted": "Pièce supprimée",
+  "duplicatePart": "Dupliquer la pièce",
+  "partSummary": "{count, plural, =1{1 ligne de pièces} other{{count} lignes de pièces}}",
+  "feet": "Pieds",
+  "inches": "Pouces",
+  "wholeInches": "Pouces entiers",
+  "fraction": "Fraction",
+  "inchesRange": "Utilisez de 0 à 11 pouces. Saisissez les pieds supplémentaires dans le champ Pieds.",
+  "imperialLengthInvalid": "Saisissez des entiers positifs ou nuls et une fraction dont la somme dépasse zéro.",
+  "partTooLongWarning": "Cette pièce dépasse la plus grande longueur de barre utilisable ({length}).",
+  "addStockToContinue": "Ajoutez des barres pour continuer.",
+  "cutPlanUnavailable": "Le plan de coupe n'est pas encore disponible.",
+  "namedPartLength": "{name} — {length}",
+  "@deletePartMessage": {
+    "placeholders": {
+      "description": {
+        "type": "String"
+      },
+      "quantity": {
+        "type": "int"
+      }
+    }
+  },
+  "@namedPartLength": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "length": {
+        "type": "String"
+      }
+    }
+  },
+  "@partSummary": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "@partTooLongWarning": {
+    "placeholders": {
+      "length": {
+        "type": "String"
+      }
+    }
+  },
+  "cutPlanTitle": "Plan de coupe",
+  "calculating": "Calcul en cours…",
+  "recalculate": "Recalculer",
+  "editCutList": "Modifier la liste de coupe",
+  "stockPiecesUsed": "{count, plural, =1{1 barre utilisée} other{{count} barres utilisées}}",
+  "stockPiecesToBuy": "{count, plural, =1{1 barre à acheter} other{{count} barres à acheter}}",
+  "buySummary": "Acheter {length} × {count}",
+  "requestedParts": "Pièces demandées",
+  "placedParts": "Pièces placées",
+  "unplacedParts": "Pièces non placées",
+  "placedOfRequested": "{placed} pièces placées sur {requested, plural, =1{1 pièce} other{{requested} pièces}}",
+  "totalFinishedLength": "Longueur totale des pièces finies",
+  "totalStockUsed": "Longueur totale de barres utilisées",
+  "totalWaste": "Chutes totales",
+  "wastePercentage": "Chutes : {value}%",
+  "reusableLeftovers": "Chutes réutilisables",
+  "scrap": "Déchets",
+  "kerfLoss": "Perte due au trait de scie",
+  "trimLoss": "Perte due à l'éboutage",
+  "reusable": "Réutilisable",
+  "leftover": "Chute",
+  "reusableExplanation": "Réutilisables : chutes d'au moins {threshold}. Les déchets comprennent le trait de scie, l'éboutage et les chutes plus courtes.",
+  "resultMetric": "{label}: {value}",
+  "barTitle": "Barre {number} · {length}",
+  "partsOnBar": "{count, plural, =1{1 pièce} other{{count} pièces}}",
+  "classifiedLeftover": "{length} · {classification}",
+  "cutOrderPart": "{number}. {description}",
+  "endTrimPerEnd": "Éboutage : {length} à chaque extrémité",
+  "barDiagramDescription": "Barre {number}, {length}, {parts}, chute {tail}.",
+  "unplacedCount": "Pièces non placées ({count})",
+  "lengthQuantity": "{length} × {quantity}",
+  "inventoryExhaustedResultReason": "Il ne reste pas assez de barres pour placer cette pièce.",
+  "resultLoadError": "Impossible de calculer cette liste de coupe.",
+  "resultValidationError": "Vérifiez les barres, les pièces et les paramètres de coupe avant le calcul.",
+  "stockTooShortAfterTrim": "La barre est trop courte après éboutage.",
+  "validBuyStockRequired": "Définissez une longueur de barre valide avant le calcul.",
+  "tooLongResultReason": "Cette pièce dépasse la plus grande longueur de barre utilisable.",
+  "@stockPiecesUsed": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "@stockPiecesToBuy": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "@buySummary": {
+    "placeholders": {
+      "length": {
+        "type": "String"
+      },
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "@placedOfRequested": {
+    "placeholders": {
+      "placed": {
+        "type": "int"
+      },
+      "requested": {
+        "type": "int"
+      }
+    }
+  },
+  "@wastePercentage": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "@reusableExplanation": {
+    "placeholders": {
+      "threshold": {
+        "type": "String"
+      }
+    }
+  },
+  "@resultMetric": {
+    "placeholders": {
+      "label": {
+        "type": "String"
+      },
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "@barTitle": {
+    "placeholders": {
+      "number": {
+        "type": "int"
+      },
+      "length": {
+        "type": "String"
+      }
+    }
+  },
+  "@partsOnBar": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "@classifiedLeftover": {
+    "placeholders": {
+      "length": {
+        "type": "String"
+      },
+      "classification": {
+        "type": "String"
+      }
+    }
+  },
+  "@cutOrderPart": {
+    "placeholders": {
+      "number": {
+        "type": "int"
+      },
+      "description": {
+        "type": "String"
+      }
+    }
+  },
+  "@endTrimPerEnd": {
+    "placeholders": {
+      "length": {
+        "type": "String"
+      }
+    }
+  },
+  "@barDiagramDescription": {
+    "placeholders": {
+      "number": {
+        "type": "int"
+      },
+      "length": {
+        "type": "String"
+      },
+      "parts": {
+        "type": "String"
+      },
+      "tail": {
+        "type": "String"
+      }
+    }
+  },
+  "@unplacedCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "@lengthQuantity": {
+    "placeholders": {
+      "length": {
+        "type": "String"
+      },
+      "quantity": {
+        "type": "int"
+      }
+    }
+  },
+  "editCutSettings": "Modifier les paramètres de coupe",
+  "units": "Unités",
+  "unitFtIn": "ft + in",
+  "millimeters": "Millimètres",
+  "centimeters": "Centimètres",
+  "meters": "Mètres",
+  "feetAndInches": "Pieds et pouces",
+  "kerf": "Trait de scie",
+  "kerfHelper": "Matière retirée entre deux pièces successives.",
+  "kerfFinalPartHelper": "Aucun trait de scie n'est ajouté après la dernière pièce d'une barre.",
+  "endTrimEachEnd": "Éboutage (par extrémité)",
+  "endTrimHelper": "Retirez cette longueur à chaque extrémité de chaque barre.",
+  "reusableLeftover": "Chute réutilisable",
+  "reusableLeftoverHelper": "Les chutes de cette longueur ou plus sont comptées comme réutilisables.",
+  "cutSettingsSaveError": "Impossible d'enregistrer les paramètres de coupe. Réessayez.",
+  "noUsableStockAfterTrim": "Aucune longueur utilisable ne reste après éboutage.",
+  "someStockUnusableAfterTrim": "Certaines barres sont trop courtes après éboutage.",
+  "nonnegativeLengthInvalid": "Saisissez un nombre supérieur ou égal à zéro.",
+  "nonnegativeImperialInvalid": "Saisissez des entiers positifs ou nuls et une fraction.",
+  "share": "Partager",
+  "shareCutPlan": "Partager le plan de coupe",
+  "shareText": "Partager le texte",
+  "sharePdf": "Partager le PDF",
+  "copyBuyList": "Copier la liste d'achat",
+  "buyListCopied": "Liste d'achat copiée",
+  "creatingPdf": "Création du PDF…",
+  "pdfCreateError": "Impossible de créer le PDF. Réessayez.",
+  "shareError": "Impossible de partager le plan de coupe. Réessayez.",
+  "buyListCopyError": "Impossible de copier la liste d'achat. Réessayez.",
+  "reportSummary": "Résumé",
+  "reportPurchase": "Achat",
+  "generatedLabel": "Généré",
+  "generatedBy": "Généré par {appName}",
+  "@generatedBy": {
+    "placeholders": {
+      "appName": {
+        "type": "String"
+      }
+    }
+  },
+  "verifyBeforeCutting": "Les plans de coupe sont des aides à la préparation. Vérifiez chaque mesure sur la barre avant de couper et respectez les consignes de sécurité des outils.",
+  "reportFileFallback": "Plan de coupe",
+  "addLeftoversToStock": "Ajouter les chutes au stock",
+  "addLeftoversTitle": "Ajouter les chutes au stock ?",
+  "addLeftoversMessage": "Ces chutes réutilisables seront ajoutées au stock de ce projet pour les futurs plans de coupe.",
+  "addLeftoversFutureHint": "Ajoutez-les une fois les coupes terminées.",
+  "addToStock": "Ajouter au stock",
+  "leftoversAddedToStock": "Chutes réutilisables ajoutées au stock pour les futurs plans de coupe.",
+  "leftoversAddError": "Impossible d'ajouter les chutes au stock. Réessayez.",
+  "reusablePieces": "{count, plural, =1{1 chute réutilisable} other{{count} chutes réutilisables}}",
+  "@reusablePieces": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "saveAndAddAnother": "Enregistrer et en ajouter une autre",
+  "defaultsSectionTitle": "Valeurs par défaut",
+  "appearanceSectionTitle": "Apparence",
+  "defaultReusableLeftover": "Chute réutilisable par défaut",
+  "newProjectsDefaultsHelper": "Ces valeurs sont utilisées pour les nouvelles listes de coupe. Les listes existantes ne changent pas.",
+  "defaultReusableHelper": "Dans les nouveaux projets, les chutes de cette longueur ou plus sont réutilisables.",
+  "themeSystem": "Système",
+  "themeLight": "Clair",
+  "themeDark": "Sombre",
+  "settingsSaveError": "Impossible d'enregistrer les paramètres. Réessayez.",
+  "settingsLoadError": "Impossible de charger les paramètres.",
+  "settingsSaved": "Paramètres enregistrés",
+  "language": "Langue",
+  "languageSystem": "Langue du système",
+  "languageEnglish": "English",
+  "languageSpanish": "Español",
+  "languageGerman": "Deutsch",
+  "languageFrench": "Français",
+  "languagePortugueseBrazil": "Português (Brasil)",
+  "languageItalian": "Italiano",
+  "languagePolish": "Polski",
+  "languageRussian": "Русский",
+  "languageTurkish": "Türkçe",
+  "languageUkrainian": "Українська",
+  "proTitle": "KerfPlan Pro",
+  "upgradeOnce": "Un seul achat. À vous pour toujours.",
+  "noSubscription": "Sans abonnement.",
+  "lifetimePro": "Pro à vie",
+  "removeAds": "Supprimer les publicités",
+  "unlockLifetimePro": "Débloquer Pro à vie — {price}",
+  "@unlockLifetimePro": {
+    "placeholders": {
+      "price": {
+        "type": "String"
+      }
+    }
+  },
+  "removeAdsCta": "Supprimer les publicités — {price}",
+  "@removeAdsCta": {
+    "placeholders": {
+      "price": {
+        "type": "String"
+      }
+    }
+  },
+  "proActive": "Pro à vie activé",
+  "adFreeActive": "Sans publicité",
+  "includedWithPro": "Inclus dans Pro à vie",
+  "removeAdsDescription": "Conservez les fonctions gratuites sans publicité.",
+  "restorePurchases": "Restaurer les achats",
+  "restoringPurchases": "Restauration des achats…",
+  "purchasesRestored": "Achats restaurés",
+  "lifetimeProRestored": "Pro à vie restauré",
+  "adFreeRestored": "Version sans publicité restaurée",
+  "nothingToRestore": "Aucun achat à restaurer",
+  "purchasePending": "Achat en attente",
+  "purchasePendingMessage": "Votre achat attend la validation du paiement par Google Play.",
+  "purchaseError": "Impossible de terminer l'achat. Réessayez.",
+  "restoreError": "Impossible de restaurer les achats. Réessayez.",
+  "billingUnavailable": "Les achats sont actuellement indisponibles.",
+  "productUnavailable": "Temporairement indisponible.",
+  "processingPurchase": "Vérification de l'achat…",
+  "purchaseVerified": "Achat vérifié",
+  "kerfPlanFree": "KerfPlan Gratuit",
+  "viewPro": "Voir Pro",
+  "upgrade": "Passer à Pro",
+  "benefitUnlimitedProjects": "Listes de coupe illimitées",
+  "benefitMultipleStocks": "Plusieurs longueurs de barre",
+  "benefitPdf": "Export PDF pour l'atelier",
+  "benefitReuseLeftovers": "Réutiliser les chutes",
+  "benefitNoAds": "Sans publicité",
+  "onboardingIntro": "Planifiez vos découpes linéaires avec moins de chutes.",
+  "howDoYouMeasure": "Quel système de mesure utilisez-vous ?",
+  "metric": "Métrique",
+  "imperial": "Impérial",
+  "metricDescription": "Millimètres, centimètres et mètres",
+  "imperialDescription": "Pouces et pieds",
+  "recommendedForRegion": "Recommandé pour votre région",
+  "continueAction": "Continuer",
+  "measurementCanChangeLater": "Vous pourrez modifier ce choix dans les paramètres.",
+  "measurements": "Mesures",
+  "measurementSystem": "Système de mesure",
+  "commonLengths": "Longueurs courantes"
+}

@@ -1,3 +1,5 @@
+import 'support/app_ready.dart';
+
 import 'dart:async';
 
 import 'package:flutter/material.dart';
@@ -83,6 +85,7 @@ void main() {
         .go(
           '/projects/${f.id}/${part ? 'parts' : 'stock'}/${editId == null ? 'new' : '$editId/edit'}',
         );
+    await completeOnboarding(f.db);
     await tester.pumpWidget(
       UncontrolledProviderScope(
         container: container,
@@ -106,6 +109,13 @@ void main() {
           matching: find.byWidgetPredicate((w) => w is ButtonStyleButton),
         )
         .last;
+    tester.testTextInput.hide();
+    await tester.pumpAndSettle();
+    await tester.dragUntilVisible(
+      button,
+      find.byType(SingleChildScrollView).last,
+      const Offset(0, -250),
+    );
     await tester.ensureVisible(button);
     await tester.tap(button);
     await tester.pumpAndSettle();

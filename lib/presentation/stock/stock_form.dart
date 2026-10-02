@@ -7,6 +7,7 @@ import '../../l10n/app_localizations.dart';
 import '../shared/inputs/length_input.dart';
 import '../shared/inputs/quantity_input.dart';
 import '../shared/widgets/save_form.dart';
+import 'stock_preset_chips.dart';
 
 class StockForm extends StatefulWidget {
   const StockForm({
@@ -84,6 +85,10 @@ class _StockFormState extends State<StockForm> {
           enabled: enabled,
           focusNode: _lengthFocus,
         ),
+        if (widget.initialStock == null) ...[
+          const SizedBox(height: 16),
+          StockPresetChips(controller: _length, enabled: enabled),
+        ],
         const SizedBox(height: 24),
         QuantityInput(controller: _quantity, enabled: enabled),
         const SizedBox(height: 24),

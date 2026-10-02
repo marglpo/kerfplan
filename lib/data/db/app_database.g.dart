@@ -1921,6 +1921,43 @@ class $AppSettingsTable extends AppSettings
     type: DriftSqlType.string,
     requiredDuringInsert: true,
   );
+  static const VerificationMeta _localeTagMeta = const VerificationMeta(
+    'localeTag',
+  );
+  @override
+  late final GeneratedColumn<String> localeTag = GeneratedColumn<String>(
+    'locale_tag',
+    aliasedName,
+    true,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _measurementSystemMeta = const VerificationMeta(
+    'measurementSystem',
+  );
+  @override
+  late final GeneratedColumn<String> measurementSystem =
+      GeneratedColumn<String>(
+        'measurement_system',
+        aliasedName,
+        true,
+        type: DriftSqlType.string,
+        requiredDuringInsert: false,
+      );
+  static const VerificationMeta _onboardingCompletedMeta =
+      const VerificationMeta('onboardingCompleted');
+  @override
+  late final GeneratedColumn<bool> onboardingCompleted = GeneratedColumn<bool>(
+    'onboarding_completed',
+    aliasedName,
+    false,
+    type: DriftSqlType.bool,
+    requiredDuringInsert: false,
+    defaultConstraints: GeneratedColumn.constraintIsAlways(
+      'CHECK ("onboarding_completed" IN (0, 1))',
+    ),
+    defaultValue: const Constant(true),
+  );
   @override
   List<GeneratedColumn> get $columns => [
     id,
@@ -1928,6 +1965,9 @@ class $AppSettingsTable extends AppSettings
     defaultKerfTicks,
     defaultReusableTicks,
     themeMode,
+    localeTag,
+    measurementSystem,
+    onboardingCompleted,
   ];
   @override
   String get aliasedName => _alias ?? actualTableName;
@@ -1985,6 +2025,30 @@ class $AppSettingsTable extends AppSettings
     } else if (isInserting) {
       context.missing(_themeModeMeta);
     }
+    if (data.containsKey('locale_tag')) {
+      context.handle(
+        _localeTagMeta,
+        localeTag.isAcceptableOrUnknown(data['locale_tag']!, _localeTagMeta),
+      );
+    }
+    if (data.containsKey('measurement_system')) {
+      context.handle(
+        _measurementSystemMeta,
+        measurementSystem.isAcceptableOrUnknown(
+          data['measurement_system']!,
+          _measurementSystemMeta,
+        ),
+      );
+    }
+    if (data.containsKey('onboarding_completed')) {
+      context.handle(
+        _onboardingCompletedMeta,
+        onboardingCompleted.isAcceptableOrUnknown(
+          data['onboarding_completed']!,
+          _onboardingCompletedMeta,
+        ),
+      );
+    }
     return context;
   }
 
@@ -2014,6 +2078,18 @@ class $AppSettingsTable extends AppSettings
         DriftSqlType.string,
         data['${effectivePrefix}theme_mode'],
       )!,
+      localeTag: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}locale_tag'],
+      ),
+      measurementSystem: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}measurement_system'],
+      ),
+      onboardingCompleted: attachedDatabase.typeMapping.read(
+        DriftSqlType.bool,
+        data['${effectivePrefix}onboarding_completed'],
+      )!,
     );
   }
 
@@ -2029,12 +2105,18 @@ class AppSetting extends DataClass implements Insertable<AppSetting> {
   final int defaultKerfTicks;
   final int defaultReusableTicks;
   final String themeMode;
+  final String? localeTag;
+  final String? measurementSystem;
+  final bool onboardingCompleted;
   const AppSetting({
     required this.id,
     required this.defaultDisplayUnit,
     required this.defaultKerfTicks,
     required this.defaultReusableTicks,
     required this.themeMode,
+    this.localeTag,
+    this.measurementSystem,
+    required this.onboardingCompleted,
   });
   @override
   Map<String, Expression> toColumns(bool nullToAbsent) {
@@ -2044,6 +2126,13 @@ class AppSetting extends DataClass implements Insertable<AppSetting> {
     map['default_kerf_ticks'] = Variable<int>(defaultKerfTicks);
     map['default_reusable_ticks'] = Variable<int>(defaultReusableTicks);
     map['theme_mode'] = Variable<String>(themeMode);
+    if (!nullToAbsent || localeTag != null) {
+      map['locale_tag'] = Variable<String>(localeTag);
+    }
+    if (!nullToAbsent || measurementSystem != null) {
+      map['measurement_system'] = Variable<String>(measurementSystem);
+    }
+    map['onboarding_completed'] = Variable<bool>(onboardingCompleted);
     return map;
   }
 
@@ -2054,6 +2143,13 @@ class AppSetting extends DataClass implements Insertable<AppSetting> {
       defaultKerfTicks: Value(defaultKerfTicks),
       defaultReusableTicks: Value(defaultReusableTicks),
       themeMode: Value(themeMode),
+      localeTag: localeTag == null && nullToAbsent
+          ? const Value.absent()
+          : Value(localeTag),
+      measurementSystem: measurementSystem == null && nullToAbsent
+          ? const Value.absent()
+          : Value(measurementSystem),
+      onboardingCompleted: Value(onboardingCompleted),
     );
   }
 
@@ -2072,6 +2168,13 @@ class AppSetting extends DataClass implements Insertable<AppSetting> {
         json['defaultReusableTicks'],
       ),
       themeMode: serializer.fromJson<String>(json['themeMode']),
+      localeTag: serializer.fromJson<String?>(json['localeTag']),
+      measurementSystem: serializer.fromJson<String?>(
+        json['measurementSystem'],
+      ),
+      onboardingCompleted: serializer.fromJson<bool>(
+        json['onboardingCompleted'],
+      ),
     );
   }
   @override
@@ -2083,6 +2186,9 @@ class AppSetting extends DataClass implements Insertable<AppSetting> {
       'defaultKerfTicks': serializer.toJson<int>(defaultKerfTicks),
       'defaultReusableTicks': serializer.toJson<int>(defaultReusableTicks),
       'themeMode': serializer.toJson<String>(themeMode),
+      'localeTag': serializer.toJson<String?>(localeTag),
+      'measurementSystem': serializer.toJson<String?>(measurementSystem),
+      'onboardingCompleted': serializer.toJson<bool>(onboardingCompleted),
     };
   }
 
@@ -2092,12 +2198,20 @@ class AppSetting extends DataClass implements Insertable<AppSetting> {
     int? defaultKerfTicks,
     int? defaultReusableTicks,
     String? themeMode,
+    Value<String?> localeTag = const Value.absent(),
+    Value<String?> measurementSystem = const Value.absent(),
+    bool? onboardingCompleted,
   }) => AppSetting(
     id: id ?? this.id,
     defaultDisplayUnit: defaultDisplayUnit ?? this.defaultDisplayUnit,
     defaultKerfTicks: defaultKerfTicks ?? this.defaultKerfTicks,
     defaultReusableTicks: defaultReusableTicks ?? this.defaultReusableTicks,
     themeMode: themeMode ?? this.themeMode,
+    localeTag: localeTag.present ? localeTag.value : this.localeTag,
+    measurementSystem: measurementSystem.present
+        ? measurementSystem.value
+        : this.measurementSystem,
+    onboardingCompleted: onboardingCompleted ?? this.onboardingCompleted,
   );
   AppSetting copyWithCompanion(AppSettingsCompanion data) {
     return AppSetting(
@@ -2112,6 +2226,13 @@ class AppSetting extends DataClass implements Insertable<AppSetting> {
           ? data.defaultReusableTicks.value
           : this.defaultReusableTicks,
       themeMode: data.themeMode.present ? data.themeMode.value : this.themeMode,
+      localeTag: data.localeTag.present ? data.localeTag.value : this.localeTag,
+      measurementSystem: data.measurementSystem.present
+          ? data.measurementSystem.value
+          : this.measurementSystem,
+      onboardingCompleted: data.onboardingCompleted.present
+          ? data.onboardingCompleted.value
+          : this.onboardingCompleted,
     );
   }
 
@@ -2122,7 +2243,10 @@ class AppSetting extends DataClass implements Insertable<AppSetting> {
           ..write('defaultDisplayUnit: $defaultDisplayUnit, ')
           ..write('defaultKerfTicks: $defaultKerfTicks, ')
           ..write('defaultReusableTicks: $defaultReusableTicks, ')
-          ..write('themeMode: $themeMode')
+          ..write('themeMode: $themeMode, ')
+          ..write('localeTag: $localeTag, ')
+          ..write('measurementSystem: $measurementSystem, ')
+          ..write('onboardingCompleted: $onboardingCompleted')
           ..write(')'))
         .toString();
   }
@@ -2134,6 +2258,9 @@ class AppSetting extends DataClass implements Insertable<AppSetting> {
     defaultKerfTicks,
     defaultReusableTicks,
     themeMode,
+    localeTag,
+    measurementSystem,
+    onboardingCompleted,
   );
   @override
   bool operator ==(Object other) =>
@@ -2143,7 +2270,10 @@ class AppSetting extends DataClass implements Insertable<AppSetting> {
           other.defaultDisplayUnit == this.defaultDisplayUnit &&
           other.defaultKerfTicks == this.defaultKerfTicks &&
           other.defaultReusableTicks == this.defaultReusableTicks &&
-          other.themeMode == this.themeMode);
+          other.themeMode == this.themeMode &&
+          other.localeTag == this.localeTag &&
+          other.measurementSystem == this.measurementSystem &&
+          other.onboardingCompleted == this.onboardingCompleted);
 }
 
 class AppSettingsCompanion extends UpdateCompanion<AppSetting> {
@@ -2152,12 +2282,18 @@ class AppSettingsCompanion extends UpdateCompanion<AppSetting> {
   final Value<int> defaultKerfTicks;
   final Value<int> defaultReusableTicks;
   final Value<String> themeMode;
+  final Value<String?> localeTag;
+  final Value<String?> measurementSystem;
+  final Value<bool> onboardingCompleted;
   const AppSettingsCompanion({
     this.id = const Value.absent(),
     this.defaultDisplayUnit = const Value.absent(),
     this.defaultKerfTicks = const Value.absent(),
     this.defaultReusableTicks = const Value.absent(),
     this.themeMode = const Value.absent(),
+    this.localeTag = const Value.absent(),
+    this.measurementSystem = const Value.absent(),
+    this.onboardingCompleted = const Value.absent(),
   });
   AppSettingsCompanion.insert({
     this.id = const Value.absent(),
@@ -2165,6 +2301,9 @@ class AppSettingsCompanion extends UpdateCompanion<AppSetting> {
     required int defaultKerfTicks,
     required int defaultReusableTicks,
     required String themeMode,
+    this.localeTag = const Value.absent(),
+    this.measurementSystem = const Value.absent(),
+    this.onboardingCompleted = const Value.absent(),
   }) : defaultDisplayUnit = Value(defaultDisplayUnit),
        defaultKerfTicks = Value(defaultKerfTicks),
        defaultReusableTicks = Value(defaultReusableTicks),
@@ -2175,6 +2314,9 @@ class AppSettingsCompanion extends UpdateCompanion<AppSetting> {
     Expression<int>? defaultKerfTicks,
     Expression<int>? defaultReusableTicks,
     Expression<String>? themeMode,
+    Expression<String>? localeTag,
+    Expression<String>? measurementSystem,
+    Expression<bool>? onboardingCompleted,
   }) {
     return RawValuesInsertable({
       if (id != null) 'id': id,
@@ -2184,6 +2326,10 @@ class AppSettingsCompanion extends UpdateCompanion<AppSetting> {
       if (defaultReusableTicks != null)
         'default_reusable_ticks': defaultReusableTicks,
       if (themeMode != null) 'theme_mode': themeMode,
+      if (localeTag != null) 'locale_tag': localeTag,
+      if (measurementSystem != null) 'measurement_system': measurementSystem,
+      if (onboardingCompleted != null)
+        'onboarding_completed': onboardingCompleted,
     });
   }
 
@@ -2193,6 +2339,9 @@ class AppSettingsCompanion extends UpdateCompanion<AppSetting> {
     Value<int>? defaultKerfTicks,
     Value<int>? defaultReusableTicks,
     Value<String>? themeMode,
+    Value<String?>? localeTag,
+    Value<String?>? measurementSystem,
+    Value<bool>? onboardingCompleted,
   }) {
     return AppSettingsCompanion(
       id: id ?? this.id,
@@ -2200,6 +2349,9 @@ class AppSettingsCompanion extends UpdateCompanion<AppSetting> {
       defaultKerfTicks: defaultKerfTicks ?? this.defaultKerfTicks,
       defaultReusableTicks: defaultReusableTicks ?? this.defaultReusableTicks,
       themeMode: themeMode ?? this.themeMode,
+      localeTag: localeTag ?? this.localeTag,
+      measurementSystem: measurementSystem ?? this.measurementSystem,
+      onboardingCompleted: onboardingCompleted ?? this.onboardingCompleted,
     );
   }
 
@@ -2221,6 +2373,15 @@ class AppSettingsCompanion extends UpdateCompanion<AppSetting> {
     if (themeMode.present) {
       map['theme_mode'] = Variable<String>(themeMode.value);
     }
+    if (localeTag.present) {
+      map['locale_tag'] = Variable<String>(localeTag.value);
+    }
+    if (measurementSystem.present) {
+      map['measurement_system'] = Variable<String>(measurementSystem.value);
+    }
+    if (onboardingCompleted.present) {
+      map['onboarding_completed'] = Variable<bool>(onboardingCompleted.value);
+    }
     return map;
   }
 
@@ -2231,7 +2392,10 @@ class AppSettingsCompanion extends UpdateCompanion<AppSetting> {
           ..write('defaultDisplayUnit: $defaultDisplayUnit, ')
           ..write('defaultKerfTicks: $defaultKerfTicks, ')
           ..write('defaultReusableTicks: $defaultReusableTicks, ')
-          ..write('themeMode: $themeMode')
+          ..write('themeMode: $themeMode, ')
+          ..write('localeTag: $localeTag, ')
+          ..write('measurementSystem: $measurementSystem, ')
+          ..write('onboardingCompleted: $onboardingCompleted')
           ..write(')'))
         .toString();
   }
@@ -3881,6 +4045,9 @@ typedef $$AppSettingsTableCreateCompanionBuilder =
       required int defaultKerfTicks,
       required int defaultReusableTicks,
       required String themeMode,
+      Value<String?> localeTag,
+      Value<String?> measurementSystem,
+      Value<bool> onboardingCompleted,
     });
 typedef $$AppSettingsTableUpdateCompanionBuilder =
     AppSettingsCompanion Function({
@@ -3889,6 +4056,9 @@ typedef $$AppSettingsTableUpdateCompanionBuilder =
       Value<int> defaultKerfTicks,
       Value<int> defaultReusableTicks,
       Value<String> themeMode,
+      Value<String?> localeTag,
+      Value<String?> measurementSystem,
+      Value<bool> onboardingCompleted,
     });
 
 class $$AppSettingsTableFilterComposer
@@ -3922,6 +4092,21 @@ class $$AppSettingsTableFilterComposer
 
   ColumnFilters<String> get themeMode => $composableBuilder(
     column: $table.themeMode,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get localeTag => $composableBuilder(
+    column: $table.localeTag,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get measurementSystem => $composableBuilder(
+    column: $table.measurementSystem,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<bool> get onboardingCompleted => $composableBuilder(
+    column: $table.onboardingCompleted,
     builder: (column) => ColumnFilters(column),
   );
 }
@@ -3959,6 +4144,21 @@ class $$AppSettingsTableOrderingComposer
     column: $table.themeMode,
     builder: (column) => ColumnOrderings(column),
   );
+
+  ColumnOrderings<String> get localeTag => $composableBuilder(
+    column: $table.localeTag,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get measurementSystem => $composableBuilder(
+    column: $table.measurementSystem,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<bool> get onboardingCompleted => $composableBuilder(
+    column: $table.onboardingCompleted,
+    builder: (column) => ColumnOrderings(column),
+  );
 }
 
 class $$AppSettingsTableAnnotationComposer
@@ -3990,6 +4190,19 @@ class $$AppSettingsTableAnnotationComposer
 
   GeneratedColumn<String> get themeMode =>
       $composableBuilder(column: $table.themeMode, builder: (column) => column);
+
+  GeneratedColumn<String> get localeTag =>
+      $composableBuilder(column: $table.localeTag, builder: (column) => column);
+
+  GeneratedColumn<String> get measurementSystem => $composableBuilder(
+    column: $table.measurementSystem,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<bool> get onboardingCompleted => $composableBuilder(
+    column: $table.onboardingCompleted,
+    builder: (column) => column,
+  );
 }
 
 class $$AppSettingsTableTableManager
@@ -4028,12 +4241,18 @@ class $$AppSettingsTableTableManager
                 Value<int> defaultKerfTicks = const Value.absent(),
                 Value<int> defaultReusableTicks = const Value.absent(),
                 Value<String> themeMode = const Value.absent(),
+                Value<String?> localeTag = const Value.absent(),
+                Value<String?> measurementSystem = const Value.absent(),
+                Value<bool> onboardingCompleted = const Value.absent(),
               }) => AppSettingsCompanion(
                 id: id,
                 defaultDisplayUnit: defaultDisplayUnit,
                 defaultKerfTicks: defaultKerfTicks,
                 defaultReusableTicks: defaultReusableTicks,
                 themeMode: themeMode,
+                localeTag: localeTag,
+                measurementSystem: measurementSystem,
+                onboardingCompleted: onboardingCompleted,
               ),
           createCompanionCallback:
               ({
@@ -4042,12 +4261,18 @@ class $$AppSettingsTableTableManager
                 required int defaultKerfTicks,
                 required int defaultReusableTicks,
                 required String themeMode,
+                Value<String?> localeTag = const Value.absent(),
+                Value<String?> measurementSystem = const Value.absent(),
+                Value<bool> onboardingCompleted = const Value.absent(),
               }) => AppSettingsCompanion.insert(
                 id: id,
                 defaultDisplayUnit: defaultDisplayUnit,
                 defaultKerfTicks: defaultKerfTicks,
                 defaultReusableTicks: defaultReusableTicks,
                 themeMode: themeMode,
+                localeTag: localeTag,
+                measurementSystem: measurementSystem,
+                onboardingCompleted: onboardingCompleted,
               ),
           withReferenceMapper: (p0) => p0
               .map(

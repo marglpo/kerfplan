@@ -38,7 +38,7 @@ void main() {
       expect(after.revision, before.revision);
       expect(after.updatedAt, before.updatedAt);
       expect(after.lastRunId, before.lastRunId);
-      expect(fixture.db.schemaVersion, 2);
+      expect(fixture.db.schemaVersion, 4);
     },
   );
 

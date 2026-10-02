@@ -1,3 +1,5 @@
+import 'support/app_ready.dart';
+
 import 'dart:async';
 
 import 'package:flutter/material.dart';
@@ -71,6 +73,7 @@ void main() {
     );
     addTearDown(container.dispose);
     container.read(routerProvider).go(route);
+    await completeOnboarding(f.db);
     await tester.pumpWidget(
       UncontrolledProviderScope(
         container: container,
@@ -90,8 +93,20 @@ void main() {
     await tester.pumpAndSettle();
   }
 
-  Future<void> chip(WidgetTester tester, String label) =>
-      tap(tester, find.widgetWithText(ChoiceChip, label));
+  Future<void> chip(WidgetTester tester, String label) async {
+    if (find.widgetWithText(ChoiceChip, label).evaluate().isEmpty) {
+      await tap(
+        tester,
+        find.widgetWithText(
+          ChoiceChip,
+          label == 'in' || label == 'ft + in' ? 'Imperial' : 'Metric',
+        ),
+      );
+    }
+    if (find.widgetWithText(ChoiceChip, label).evaluate().isEmpty) return;
+    await tap(tester, find.widgetWithText(ChoiceChip, label));
+  }
+
   Future<void> save(WidgetTester tester) =>
       tap(tester, find.widgetWithText(FilledButton, 'Save'));
   Future<void> metric(WidgetTester tester, String label, String value) async {
@@ -282,7 +297,10 @@ void main() {
       await start(tester);
       await metric(tester, label, '-1');
       await save(tester);
-      expect(await repository.getSettings(), AppPreferences.defaults);
+      expect(
+        await repository.getSettings(),
+        AppPreferences.defaults.copyWith(onboardingCompleted: true),
+      );
       await chip(tester, 'in');
       expect(control(tester, label).unit, DisplayUnit.mm);
       expect(control(tester, label).text, '-1');
@@ -318,7 +336,10 @@ void main() {
       );
       expect(find.textContaining('private detail'), findsNothing);
       expect(mode(tester), ThemeMode.system);
-      expect(await repository.getSettings(), AppPreferences.defaults);
+      expect(
+        await repository.getSettings(),
+        AppPreferences.defaults.copyWith(onboardingCompleted: true),
+      );
       expect(control(tester, 'Default kerf').length.ticks, 40000);
       expect(
         control(tester, 'Default reusable leftover').length.ticks,

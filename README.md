@@ -6,6 +6,14 @@ The Flutter SDK supplies compile/target SDK 36. Android application ID and names
 are `com.kerfplan.app`. Play Console registration must confirm availability;
 production signing remains separate work.
 
+The UI supports English, Spanish, German, French, Brazilian Portuguese,
+Italian, Polish, Russian, Turkish and Ukrainian. It follows the device language
+by default, with English fallback; users can select a language in Settings.
+See [localization review](docs/localization_review.md) for terminology and review notes.
+First-launch measurement setup recommends Metric or Imperial from the platform
+locale country; the user can override it. Language and units are independent.
+See [measurement setup](docs/measurement_setup.md).
+
 ## Accountless billing backend foundation
 
 `functions/` contains Node.js 22 / TypeScript Firebase second-generation Functions,
@@ -22,8 +30,10 @@ commands, and manual Play/Firebase steps are in
 The client uses the existing real FlutterFire Android configuration. See
 [billing client setup](docs/billing_client_setup.md) for the required Functions
 region build setting, Play Integrity/debug App Check setup and manual purchase tests.
-Drift schema v2 adds only the local entitlement cache, with a tested nondestructive
-v1 migration. `/pro` and Settings offer purchase/restore using backend verification.
+Drift schema v2 added the local entitlement cache; schema v3 adds a nullable
+language preference; schema v4 adds measurement system and onboarding state.
+These upgrades preserve existing project data. `/pro` and
+Settings offer purchase/restore using backend verification.
 No feature gates or ads are applied in this milestone.
 
 ## Structure
@@ -35,11 +45,11 @@ No feature gates or ads are applied in this milestone.
 - `lib/domain/optimizer`: synchronous pure-Dart FFD, immutable inputs/results, typed failures.
 - `lib/domain/repositories`: ProjectRepository, StockRepository and PartRepository contracts without
   Drift/Flutter dependencies.
-- `lib/data/db`: unchanged Drift schema v1 and provider-owned persistent database.
+- `lib/data/db`: Drift schema v4 and provider-owned persistent database.
 - `lib/data/repositories`: Drift implementation and domain mapping.
-- `lib/presentation`: reactive Home/Project, stock/part editors, shared length/quantity inputs
-  and save-form behavior, plus placeholder Settings.
-- `lib/l10n`: English ARB and generated official Flutter localization classes.
+- `lib/presentation`: reactive Home/Project, stock/part editors, shared length/quantity inputs,
+  first-launch measurement setup, and persisted Settings.
+- `lib/l10n`: ten bundled languages in ARB and generated official Flutter localization classes.
 
 ## Project CRUD
 
@@ -271,7 +281,7 @@ dart run build_runner build
 dart format .
 flutter analyze
 flutter test
-flutter build apk --debug
+flutter build apk --debug --dart-define=BILLING_REGION=europe-west4
 ```
 
 Do not edit generated Drift or localization Dart files by hand. See AGENTS.md

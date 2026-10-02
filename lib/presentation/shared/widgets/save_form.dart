@@ -11,6 +11,7 @@ class SaveForm extends StatefulWidget {
     this.onSubmitAnother,
     this.submitAnotherLabel,
     this.stayOpenAfterSubmit = false,
+    this.submitEnabled = true,
     this.footer,
   });
   final String submitLabel;
@@ -20,6 +21,7 @@ class SaveForm extends StatefulWidget {
   final Future<void> Function()? onSubmitAnother;
   final String? submitAnotherLabel;
   final bool stayOpenAfterSubmit;
+  final bool submitEnabled;
   final Widget? footer;
 
   @override
@@ -33,7 +35,12 @@ class _SaveFormState extends State<SaveForm> {
   bool _failed = false;
 
   Future<void> _submit({bool another = false}) async {
-    if (_saving || _submitted || !_formKey.currentState!.validate()) return;
+    if (_saving ||
+        _submitted ||
+        !widget.submitEnabled ||
+        !_formKey.currentState!.validate()) {
+      return;
+    }
     setState(() {
       _saving = true;
       _failed = false;
@@ -60,54 +67,51 @@ class _SaveFormState extends State<SaveForm> {
     child: Form(
       key: _formKey,
       autovalidateMode: AutovalidateMode.onUserInteraction,
-      child: ListView(
+      child: SingleChildScrollView(
         keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
         padding: const EdgeInsets.all(24),
-        children: [
-          // Forms are short. Keep every field mounted so validation includes
-          // offscreen inputs, especially the three imperial settings editors.
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              ...widget.fields(!_saving && !_submitted),
-              const SizedBox(height: 24),
-              if (_failed) ...[
-                Semantics(
-                  liveRegion: true,
-                  child: Text(
-                    widget.errorMessage,
-                    style: TextStyle(
-                      color: Theme.of(context).colorScheme.error,
-                    ),
-                  ),
+        // Keep every field mounted so validation includes offscreen inputs.
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            ...widget.fields(!_saving && !_submitted),
+            const SizedBox(height: 24),
+            if (_failed) ...[
+              Semantics(
+                liveRegion: true,
+                child: Text(
+                  widget.errorMessage,
+                  style: TextStyle(color: Theme.of(context).colorScheme.error),
                 ),
-                const SizedBox(height: 16),
-              ],
-              FilledButton(
-                onPressed: _saving || _submitted ? null : _submit,
-                child: Text(widget.submitLabel),
               ),
-              if (widget.onSubmitAnother != null) ...[
-                const SizedBox(height: 12),
-                OutlinedButton(
-                  style: OutlinedButton.styleFrom(
-                    minimumSize: const Size(64, 48),
-                  ),
-                  onPressed: _saving || _submitted
-                      ? null
-                      : () => _submit(another: true),
-                  child: Text(widget.submitAnotherLabel!),
-                ),
-              ],
-              if (_saving)
-                const Padding(
-                  padding: EdgeInsets.only(top: 16),
-                  child: Center(child: CircularProgressIndicator()),
-                ),
-              if (widget.footer != null) widget.footer!,
+              const SizedBox(height: 16),
             ],
-          ),
-        ],
+            FilledButton(
+              onPressed: _saving || _submitted || !widget.submitEnabled
+                  ? null
+                  : _submit,
+              child: Text(widget.submitLabel),
+            ),
+            if (widget.onSubmitAnother != null) ...[
+              const SizedBox(height: 12),
+              OutlinedButton(
+                style: OutlinedButton.styleFrom(
+                  minimumSize: const Size(64, 48),
+                ),
+                onPressed: _saving || _submitted || !widget.submitEnabled
+                    ? null
+                    : () => _submit(another: true),
+                child: Text(widget.submitAnotherLabel!),
+              ),
+            ],
+            if (_saving)
+              const Padding(
+                padding: EdgeInsets.only(top: 16),
+                child: Center(child: CircularProgressIndicator()),
+              ),
+            if (widget.footer != null) widget.footer!,
+          ],
+        ),
       ),
     ),
   );

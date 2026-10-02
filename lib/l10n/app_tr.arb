@@ -1,0 +1,557 @@
+{
+  "@@locale": "tr",
+  "appName": "KerfPlan",
+  "homeTitle": "KerfPlan",
+  "settingsTitle": "Ayarlar",
+  "newCutList": "Yeni kesim listesi",
+  "noProjectsTitle": "Henüz kesim listesi yok",
+  "noProjectsMessage": "İlk işinizi bir dakikadan kısa sürede planlayın.",
+  "appVersionLabel": "Uygulama sürümü",
+  "defaultUnits": "Varsayılan birimler",
+  "defaultKerf": "Varsayılan kesim payı",
+  "theme": "Tema",
+  "newProjectTitle": "Yeni kesim listesi",
+  "projectNameLabel": "Proje adı",
+  "projectNameHint": "Garaj çerçevesi",
+  "materialLabel": "Malzeme",
+  "materialHint": "40x20 çelik",
+  "noteLabel": "Not",
+  "noteHint": "Güney duvarı",
+  "createCutList": "Kesim listesi oluştur",
+  "save": "Kaydet",
+  "editDetails": "Ayrıntıları düzenle",
+  "duplicate": "Çoğalt",
+  "copyLabel": "Kopya",
+  "@copyLabel": {
+    "description": "Suffix for automatically generated duplicate project names."
+  },
+  "delete": "Sil",
+  "deleteProjectTitle": "Kesim listesi silinsin mi?",
+  "deleteProjectMessage": "“{projectName}” bu cihazdan kalıcı olarak silinecek.",
+  "@deleteProjectMessage": {
+    "placeholders": {
+      "projectName": {
+        "type": "String"
+      }
+    }
+  },
+  "cancel": "İptal",
+  "projectDeleted": "Kesim listesi silindi",
+  "projectActions": "{projectName} için işlemler",
+  "@projectActions": {
+    "placeholders": {
+      "projectName": {
+        "type": "String"
+      }
+    }
+  },
+  "updatedLabel": "Güncellendi: {date}",
+  "@updatedLabel": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "stockSectionTitle": "Stok malzeme",
+  "noStockYet": "Henüz stok uzunluğu eklenmedi.",
+  "partsSectionTitle": "Parçalar",
+  "noPartsYet": "Henüz parça eklenmedi.",
+  "cutSettingsSectionTitle": "Kesim ayarları",
+  "calculate": "Hesapla",
+  "calculateDisabledHint": "Kesim planı hesaplamak için parça ekleyin.",
+  "projectNotFound": "Kesim listesi bulunamadı",
+  "backToProjects": "Listelere dön",
+  "projectNameRequired": "Proje adı girin.",
+  "projectNameTooLong": "Proje adı en fazla 80 karakter olabilir.",
+  "materialTooLong": "Malzeme en fazla 120 karakter olabilir.",
+  "noteTooLong": "Not en fazla 500 karakter olabilir.",
+  "projectSaveError": "Kesim listesi kaydedilemedi. Tekrar deneyin.",
+  "projectDeleteError": "Kesim listesi silinemedi. Tekrar deneyin.",
+  "projectDuplicateError": "Kesim listesi çoğaltılamadı. Tekrar deneyin.",
+  "projectsLoadError": "Kesim listeleriniz yüklenemedi.",
+  "projectLoadError": "Bu kesim listesi yüklenemedi.",
+  "retry": "Tekrar dene",
+  "fixedInventory": "Mevcut stok",
+  "buyStock": "Malzeme satın al",
+  "addStockLength": "Stok uzunluğu ekle",
+  "editStockLength": "Stok uzunluğunu düzenle",
+  "stockLength": "Uzunluk",
+  "quantity": "Adet",
+  "labelOptional": "Etiket (isteğe bağlı)",
+  "stockLengthHint": "6000",
+  "stockLengthCmHint": "244",
+  "stockLengthMHint": "2,4",
+  "stockLabelHint": "Depo",
+  "quantityHint": "10",
+  "stockLengthRequired": "Uzunluk girin.",
+  "stockLengthInvalid": "Sıfırdan büyük bir sayı girin.",
+  "stockLengthPrecision": "Bu değer tam olarak kaydedilemiyor. 0,0001 mm'nin katı olan bir uzunluk kullanın.",
+  "stockLengthTooLarge": "Bu uzunluk çok büyük.",
+  "quantityRequired": "Adet girin.",
+  "quantityInvalid": "1 ile 9999 arasında bir tam sayı girin.",
+  "quantityTooLarge": "Adet en fazla 9999 olabilir.",
+  "stockLabelTooLong": "Etiket en fazla 80 karakter olabilir.",
+  "saveStock": "Stok uzunluğunu kaydet",
+  "stockSaveError": "Bu stok uzunluğu kaydedilemedi. Tekrar deneyin.",
+  "stockDeleteError": "Bu stok uzunluğu silinemedi. Tekrar deneyin.",
+  "stockDuplicateError": "Bu stok uzunluğu çoğaltılamadı. Tekrar deneyin.",
+  "stockLoadError": "Stok yüklenemedi.",
+  "stockNotFound": "Stok uzunluğu bulunamadı",
+  "deleteStockTitle": "Stok uzunluğu silinsin mi?",
+  "deleteStockMessage": "{length} × {quantity} bu kesim listesinden kaldırılacak.",
+  "@deleteStockMessage": {
+    "placeholders": {
+      "length": {
+        "type": "String"
+      },
+      "quantity": {
+        "type": "int"
+      }
+    }
+  },
+  "stockDeleted": "Stok uzunluğu silindi",
+  "duplicateStock": "Stok uzunluğunu çoğalt",
+  "stockSummary": "{count, plural, one{{count} stok uzunluğu} other{{count} stok uzunluğu}}",
+  "@stockSummary": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "totalPieces": "{count, plural, one{Toplam {count} adet} other{Toplam {count} adet}}",
+  "@totalPieces": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "setBuyStockLength": "Stok uzunluğunu belirle",
+  "buyStockHelper": "Kaç adet satın almanız gerektiğini hesaplayacağız.",
+  "buyStockLengthMissing": "Satın almayı planladığınız stok uzunluğunu belirleyin.",
+  "stockModeSaveError": "Stok modu değiştirilemedi. Tekrar deneyin.",
+  "backToProject": "Kesim listesine dön",
+  "decreaseQuantity": "Adedi azalt",
+  "increaseQuantity": "Adedi artır",
+  "unitMm": "mm",
+  "unitCm": "cm",
+  "unitM": "m",
+  "unitInch": "in",
+  "lengthWithUnit": "{value} {unit}",
+  "@lengthWithUnit": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      },
+      "unit": {
+        "type": "String"
+      }
+    }
+  },
+  "approximateLength": "≈ {value}",
+  "@approximateLength": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "stockQuantity": "× {quantity}",
+  "@stockQuantity": {
+    "placeholders": {
+      "quantity": {
+        "type": "int"
+      }
+    }
+  },
+  "stockActions": "{length} için işlemler",
+  "@stockActions": {
+    "placeholders": {
+      "length": {
+        "type": "String"
+      }
+    }
+  },
+  "decimalInchesHelper": "Ondalıklı inç değeri girin.",
+  "exactStoredLengthHelper": "Tam kayıtlı değer: {value} mm. İnç gösterimi yaklaşık değerdir. Düzenlemediğiniz sürece kayıtlı uzunluk tam olarak korunur.",
+  "@exactStoredLengthHelper": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "addPart": "Parça ekle",
+  "editPart": "Parçayı düzenle",
+  "partNameOptional": "Parça adı (isteğe bağlı)",
+  "partNameHint": "Dikme",
+  "partNameTooLong": "Parça adı en fazla 100 karakter olabilir.",
+  "partSaveError": "Bu parça kaydedilemedi. Tekrar deneyin.",
+  "partDeleteError": "Bu parça silinemedi. Tekrar deneyin.",
+  "partDuplicateError": "Bu parça çoğaltılamadı. Tekrar deneyin.",
+  "partLoadError": "Parçalar yüklenemedi.",
+  "partNotFound": "Parça bulunamadı",
+  "deletePartTitle": "Parça silinsin mi?",
+  "deletePartMessage": "{description} × {quantity} bu kesim listesinden kaldırılacak.",
+  "partDeleted": "Parça silindi",
+  "duplicatePart": "Parçayı çoğalt",
+  "partSummary": "{count, plural, one{{count} parça satırı} other{{count} parça satırı}}",
+  "feet": "Fit",
+  "inches": "İnç",
+  "wholeInches": "Tam inç",
+  "fraction": "Kesir",
+  "inchesRange": "0 ile 11 inç kullanın. Fazla fit değerini Fit alanına girin.",
+  "imperialLengthInvalid": "Toplamı sıfırdan büyük olacak şekilde negatif olmayan tam sayılar ve bir kesir girin.",
+  "partTooLongWarning": "Bu parça kullanılabilir en uzun stoktan ({length}) daha uzun.",
+  "addStockToContinue": "Devam etmek için stok ekleyin.",
+  "cutPlanUnavailable": "Kesim planı henüz kullanılamıyor.",
+  "namedPartLength": "{name} — {length}",
+  "@deletePartMessage": {
+    "placeholders": {
+      "description": {
+        "type": "String"
+      },
+      "quantity": {
+        "type": "int"
+      }
+    }
+  },
+  "@namedPartLength": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "length": {
+        "type": "String"
+      }
+    }
+  },
+  "@partSummary": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "@partTooLongWarning": {
+    "placeholders": {
+      "length": {
+        "type": "String"
+      }
+    }
+  },
+  "cutPlanTitle": "Kesim planı",
+  "calculating": "Hesaplanıyor…",
+  "recalculate": "Yeniden hesapla",
+  "editCutList": "Kesim listesini düzenle",
+  "stockPiecesUsed": "{count, plural, one{{count} stok parçası kullanıldı} other{{count} stok parçası kullanıldı}}",
+  "stockPiecesToBuy": "{count, plural, one{Satın alınacak {count} stok parçası} other{Satın alınacak {count} stok parçası}}",
+  "buySummary": "Satın al: {length} × {count}",
+  "requestedParts": "İstenen parçalar",
+  "placedParts": "Yerleştirilen parçalar",
+  "unplacedParts": "Yerleştirilemeyen parçalar",
+  "placedOfRequested": "{requested, plural, one{{requested} parçadan} other{{requested} parçadan}} {placed} tanesi yerleştirildi",
+  "totalFinishedLength": "Bitmiş parçaların toplam uzunluğu",
+  "totalStockUsed": "Kullanılan toplam stok uzunluğu",
+  "totalWaste": "Toplam fire",
+  "wastePercentage": "Fire: %{value}",
+  "reusableLeftovers": "Yeniden kullanılabilir artıklar",
+  "scrap": "Hurda",
+  "kerfLoss": "Kesim payı kaybı",
+  "trimLoss": "Uç kırpma kaybı",
+  "reusable": "Yeniden kullanılabilir",
+  "leftover": "Artık",
+  "reusableExplanation": "Yeniden kullanılabilir: en az {threshold} uzunluğundaki uç artıklar. Hurda; kesim payı, uç kırpma ve kısa artıkları içerir.",
+  "resultMetric": "{label}: {value}",
+  "barTitle": "Çubuk {number} · {length}",
+  "partsOnBar": "{count, plural, one{{count} parça} other{{count} parça}}",
+  "classifiedLeftover": "{length} · {classification}",
+  "cutOrderPart": "{number}. {description}",
+  "endTrimPerEnd": "Uç kırpma: her uçtan {length}",
+  "barDiagramDescription": "Stok çubuğu {number}, {length}, {parts}, artık {tail}.",
+  "unplacedCount": "Yerleştirilemeyen parçalar ({count})",
+  "lengthQuantity": "{length} × {quantity}",
+  "inventoryExhaustedResultReason": "Bu parça için yeterli stok kalmadı.",
+  "resultLoadError": "Bu kesim listesi hesaplanamadı.",
+  "resultValidationError": "Hesaplamadan önce stok, parçalar ve kesim ayarlarını kontrol edin.",
+  "stockTooShortAfterTrim": "Uç kırpma sonrası stok çok kısa kalıyor.",
+  "validBuyStockRequired": "Hesaplamadan önce geçerli bir stok uzunluğu belirleyin.",
+  "tooLongResultReason": "Bu parça kullanılabilir en uzun stoktan daha uzun.",
+  "@stockPiecesUsed": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "@stockPiecesToBuy": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "@buySummary": {
+    "placeholders": {
+      "length": {
+        "type": "String"
+      },
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "@placedOfRequested": {
+    "placeholders": {
+      "placed": {
+        "type": "int"
+      },
+      "requested": {
+        "type": "int"
+      }
+    }
+  },
+  "@wastePercentage": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "@reusableExplanation": {
+    "placeholders": {
+      "threshold": {
+        "type": "String"
+      }
+    }
+  },
+  "@resultMetric": {
+    "placeholders": {
+      "label": {
+        "type": "String"
+      },
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "@barTitle": {
+    "placeholders": {
+      "number": {
+        "type": "int"
+      },
+      "length": {
+        "type": "String"
+      }
+    }
+  },
+  "@partsOnBar": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "@classifiedLeftover": {
+    "placeholders": {
+      "length": {
+        "type": "String"
+      },
+      "classification": {
+        "type": "String"
+      }
+    }
+  },
+  "@cutOrderPart": {
+    "placeholders": {
+      "number": {
+        "type": "int"
+      },
+      "description": {
+        "type": "String"
+      }
+    }
+  },
+  "@endTrimPerEnd": {
+    "placeholders": {
+      "length": {
+        "type": "String"
+      }
+    }
+  },
+  "@barDiagramDescription": {
+    "placeholders": {
+      "number": {
+        "type": "int"
+      },
+      "length": {
+        "type": "String"
+      },
+      "parts": {
+        "type": "String"
+      },
+      "tail": {
+        "type": "String"
+      }
+    }
+  },
+  "@unplacedCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "@lengthQuantity": {
+    "placeholders": {
+      "length": {
+        "type": "String"
+      },
+      "quantity": {
+        "type": "int"
+      }
+    }
+  },
+  "editCutSettings": "Kesim ayarlarını düzenle",
+  "units": "Birimler",
+  "unitFtIn": "ft + in",
+  "millimeters": "Milimetre",
+  "centimeters": "Santimetre",
+  "meters": "Metre",
+  "feetAndInches": "Fit ve inç",
+  "kerf": "Kesim payı",
+  "kerfHelper": "Ardışık parçalar arasında kesilerek kaybolan malzeme.",
+  "kerfFinalPartHelper": "Çubuktaki son parçadan sonra kesim payı eklenmez.",
+  "endTrimEachEnd": "Uç kırpma (her uçtan)",
+  "endTrimHelper": "Her stok çubuğunun iki ucundan da bu uzunluğu kırpın.",
+  "reusableLeftover": "Yeniden kullanılabilir artık",
+  "reusableLeftoverHelper": "Bu uzunluk ve üzerindeki artıklar yeniden kullanılabilir sayılır.",
+  "cutSettingsSaveError": "Kesim ayarları kaydedilemedi. Tekrar deneyin.",
+  "noUsableStockAfterTrim": "Uç kırpma sonrası kullanılabilir stok uzunluğu kalmıyor.",
+  "someStockUnusableAfterTrim": "Bazı stok çubukları uç kırpma sonrası çok kısa kalıyor.",
+  "nonnegativeLengthInvalid": "Sıfır veya daha büyük bir sayı girin.",
+  "nonnegativeImperialInvalid": "Negatif olmayan tam sayılar ve bir kesir girin.",
+  "share": "Paylaş",
+  "shareCutPlan": "Kesim planını paylaş",
+  "shareText": "Metin olarak paylaş",
+  "sharePdf": "PDF paylaş",
+  "copyBuyList": "Alışveriş listesini kopyala",
+  "buyListCopied": "Alışveriş listesi kopyalandı",
+  "creatingPdf": "PDF oluşturuluyor…",
+  "pdfCreateError": "PDF oluşturulamadı. Tekrar deneyin.",
+  "shareError": "Kesim planı paylaşılamadı. Tekrar deneyin.",
+  "buyListCopyError": "Alışveriş listesi kopyalanamadı. Tekrar deneyin.",
+  "reportSummary": "Özet",
+  "reportPurchase": "Satın alma",
+  "generatedLabel": "Oluşturulma",
+  "generatedBy": "{appName} ile oluşturuldu",
+  "@generatedBy": {
+    "placeholders": {
+      "appName": {
+        "type": "String"
+      }
+    }
+  },
+  "verifyBeforeCutting": "Kesim planları planlama yardımcısıdır. Kesmeden önce her ölçüyü malzeme üzerinde doğrulayın ve alet güvenliği kurallarına uyun.",
+  "reportFileFallback": "Kesim planı",
+  "addLeftoversToStock": "Artıkları stoka ekle",
+  "addLeftoversTitle": "Artıklar stoka eklensin mi?",
+  "addLeftoversMessage": "Bu yeniden kullanılabilir artıklar gelecekteki kesim planları için projenin mevcut stoğuna eklenecek.",
+  "addLeftoversFutureHint": "Artıkları kesimleri tamamladıktan sonra ekleyin.",
+  "addToStock": "Stoka ekle",
+  "leftoversAddedToStock": "Yeniden kullanılabilir artıklar gelecekteki planlar için stoka eklendi.",
+  "leftoversAddError": "Artıklar stoka eklenemedi. Tekrar deneyin.",
+  "reusablePieces": "{count, plural, one{{count} yeniden kullanılabilir parça} other{{count} yeniden kullanılabilir parça}}",
+  "@reusablePieces": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "saveAndAddAnother": "Kaydet ve yenisini ekle",
+  "defaultsSectionTitle": "Varsayılanlar",
+  "appearanceSectionTitle": "Görünüm",
+  "defaultReusableLeftover": "Varsayılan yeniden kullanılabilir artık",
+  "newProjectsDefaultsHelper": "Bu değerler yeni kesim listelerinde kullanılır. Mevcut listeler değişmez.",
+  "defaultReusableHelper": "Yeni projelerde bu uzunluk ve üzerindeki artıklar yeniden kullanılabilir sayılır.",
+  "themeSystem": "Sistem",
+  "themeLight": "Açık",
+  "themeDark": "Koyu",
+  "settingsSaveError": "Ayarlar kaydedilemedi. Tekrar deneyin.",
+  "settingsLoadError": "Ayarlar yüklenemedi.",
+  "settingsSaved": "Ayarlar kaydedildi",
+  "language": "Dil",
+  "languageSystem": "Sistem varsayılanı",
+  "languageEnglish": "English",
+  "languageSpanish": "Español",
+  "languageGerman": "Deutsch",
+  "languageFrench": "Français",
+  "languagePortugueseBrazil": "Português (Brasil)",
+  "languageItalian": "Italiano",
+  "languagePolish": "Polski",
+  "languageRussian": "Русский",
+  "languageTurkish": "Türkçe",
+  "languageUkrainian": "Українська",
+  "proTitle": "KerfPlan Pro",
+  "upgradeOnce": "Bir kez satın alın. Süresiz kullanın.",
+  "noSubscription": "Abonelik yok.",
+  "lifetimePro": "Ömür boyu Pro",
+  "removeAds": "Reklamları kaldır",
+  "unlockLifetimePro": "Ömür boyu Pro'yu aç — {price}",
+  "@unlockLifetimePro": {
+    "placeholders": {
+      "price": {
+        "type": "String"
+      }
+    }
+  },
+  "removeAdsCta": "Reklamları kaldır — {price}",
+  "@removeAdsCta": {
+    "placeholders": {
+      "price": {
+        "type": "String"
+      }
+    }
+  },
+  "proActive": "Ömür boyu Pro etkin",
+  "adFreeActive": "Reklamsız",
+  "includedWithPro": "Ömür boyu Pro'ya dahil",
+  "removeAdsDescription": "Ücretsiz özellikleri koruyun, reklamları kaldırın.",
+  "restorePurchases": "Satın alımları geri yükle",
+  "restoringPurchases": "Satın alımlar geri yükleniyor…",
+  "purchasesRestored": "Satın alımlar geri yüklendi",
+  "lifetimeProRestored": "Ömür boyu Pro geri yüklendi",
+  "adFreeRestored": "Reklamsız sürüm geri yüklendi",
+  "nothingToRestore": "Geri yüklenecek satın alım yok",
+  "purchasePending": "Satın alım beklemede",
+  "purchasePendingMessage": "Satın alımınızın ödemesi Google Play tarafından işlenmeyi bekliyor.",
+  "purchaseError": "Satın alım tamamlanamadı. Tekrar deneyin.",
+  "restoreError": "Satın alımlar geri yüklenemedi. Tekrar deneyin.",
+  "billingUnavailable": "Satın alımlar şu anda kullanılamıyor.",
+  "productUnavailable": "Geçici olarak kullanılamıyor.",
+  "processingPurchase": "Satın alım doğrulanıyor…",
+  "purchaseVerified": "Satın alım doğrulandı",
+  "kerfPlanFree": "KerfPlan Ücretsiz",
+  "viewPro": "Pro'yu görüntüle",
+  "upgrade": "Yükselt",
+  "benefitUnlimitedProjects": "Sınırsız kesim listesi",
+  "benefitMultipleStocks": "Birden çok stok uzunluğu",
+  "benefitPdf": "Atölye için PDF dışa aktarma",
+  "benefitReuseLeftovers": "Artıkları yeniden kullan",
+  "benefitNoAds": "Reklam yok",
+  "onboardingIntro": "Daha az fireyle doğrusal kesimleri planlayın.",
+  "howDoYouMeasure": "Hangi ölçü sistemini kullanıyorsunuz?",
+  "metric": "Metrik",
+  "imperial": "İngiliz",
+  "metricDescription": "Milimetre, santimetre ve metre",
+  "imperialDescription": "İnç ve fit",
+  "recommendedForRegion": "Bölgeniz için önerilir",
+  "continueAction": "Devam et",
+  "measurementCanChangeLater": "Bunu daha sonra Ayarlar bölümünden değiştirebilirsiniz.",
+  "measurements": "Ölçüler",
+  "measurementSystem": "Ölçü sistemi",
+  "commonLengths": "Yaygın uzunluklar"
+}

@@ -1,3 +1,5 @@
+import 'support/app_ready.dart';
+
 import 'dart:async';
 
 import 'package:flutter/material.dart';
@@ -64,6 +66,7 @@ void main() {
     );
     addTearDown(container.dispose);
     container.read(routerProvider).go('/projects/${f.id}/result');
+    await completeOnboarding(f.db);
     await tester.pumpWidget(
       UncontrolledProviderScope(
         container: container,

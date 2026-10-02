@@ -67,10 +67,23 @@ Backend verification, inside `functions/`: `npm install`, `npm run build`,
 explicit authorization and real configuration; see `docs/billing_backend_setup.md`.
 
 The approved Flutter billing client uses Firebase Core/App Check/callable Functions
-and Google Play Billing without login. Drift schema v2 adds a local entitlement
-cache; migrations must preserve existing project data. Failed/offline/partial
+and Google Play Billing without login. Drift schema v2 added a local entitlement
+cache; schema v3 adds nullable AppSettings.localeTag for System/default language.
+Schema v4 adds measurement system and onboarding completion in one
+non-destructive upgrade; migrated users skip onboarding.
+Migrations must preserve existing project and entitlement data. Failed/offline/partial
 reconciliation must never clear cached ownership. Grant only after same-product
 backend verification; keep acknowledgement server-side. Production App Check uses
 Play Integrity; debug provider is explicit development-only. Configure the real
 Functions region, never guess Firebase credentials. See `docs/billing_client_setup.md`.
 Feature gating and ads remain outside this milestone.
+
+The app bundles ten UI languages. `app_en.arb` is canonical; keep complete ARB
+key/placeholder/plural coverage, including PDF, share, billing and accessibility
+copy. System language is the default with English fallback. Manual language choice
+uses AppSettings and must not change measurement preferences or user-entered text.
+Flutter requires `app_pt.arb` as a base for `app_pt_BR.arb`; selectable locales are
+limited to the ten supported product languages. See `docs/localization_review.md`.
+Language and measurement system are independent. Region recommendations use
+platform locale country only and never change existing project units. See
+`docs/measurement_setup.md`.

@@ -10,6 +10,10 @@ class AppSettings extends Table {
   IntColumn get defaultKerfTicks => integer()();
   IntColumn get defaultReusableTicks => integer()();
   TextColumn get themeMode => text()();
+  TextColumn get localeTag => text().nullable()();
+  TextColumn get measurementSystem => text().nullable()();
+  BoolColumn get onboardingCompleted =>
+      boolean().withDefault(const Constant(true))();
 
   @override
   Set<Column> get primaryKey => {id};

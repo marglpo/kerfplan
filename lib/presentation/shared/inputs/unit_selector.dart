@@ -9,9 +9,11 @@ class UnitSelector extends StatelessWidget {
     super.key,
     required this.selected,
     required this.onSelected,
+    this.units = DisplayUnit.values,
   });
   final DisplayUnit selected;
   final ValueChanged<DisplayUnit>? onSelected;
+  final List<DisplayUnit> units;
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +22,7 @@ class UnitSelector extends StatelessWidget {
       spacing: 8,
       runSpacing: 8,
       children: [
-        for (final unit in DisplayUnit.values)
+        for (final unit in units)
           Semantics(
             label: switch (unit) {
               DisplayUnit.mm => l10n.millimeters,

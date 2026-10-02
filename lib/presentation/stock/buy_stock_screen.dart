@@ -9,6 +9,7 @@ import '../../l10n/app_localizations.dart';
 import '../projects/project_state_view.dart';
 import '../shared/inputs/length_input.dart';
 import '../shared/widgets/save_form.dart';
+import 'stock_preset_chips.dart';
 
 class BuyStockScreen extends ConsumerWidget {
   const BuyStockScreen({super.key, required this.projectId});
@@ -75,6 +76,8 @@ class _BuyLengthFormState extends State<_BuyLengthForm> {
       onSubmit: () => widget.onSubmit(_length.length),
       fields: (enabled) => [
         LengthInputField(controller: _length, enabled: enabled),
+        const SizedBox(height: 16),
+        StockPresetChips(controller: _length, enabled: enabled),
         const SizedBox(height: 16),
         Text(l10n.buyStockHelper),
       ],

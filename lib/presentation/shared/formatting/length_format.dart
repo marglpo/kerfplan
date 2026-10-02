@@ -23,6 +23,11 @@ String displayLength(AppLocalizations l10n, Length length, DisplayUnit unit) {
         : result.text;
   }
   final formatted = DecimalLength.format(length, unit);
-  final value = l10n.lengthWithUnit(formatted.text, unitLabel(l10n, unit));
+  // Presentation only: exact ticks and editable values are never round-tripped
+  // through this localized decimal string.
+  final decimal = l10n.localeName == 'en'
+      ? formatted.text
+      : formatted.text.replaceAll('.', ',');
+  final value = l10n.lengthWithUnit(decimal, unitLabel(l10n, unit));
   return formatted.approximate ? l10n.approximateLength(value) : value;
 }

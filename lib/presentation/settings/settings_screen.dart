@@ -28,6 +28,13 @@ class SettingsScreen extends ConsumerWidget {
               data: (settings) => SettingsForm(
                 footer: const BillingSettingsSection(),
                 initial: settings,
+                onLanguageSelected: (language) async {
+                  final repository = ref.read(appSettingsRepositoryProvider);
+                  final current = await repository.getSettings();
+                  await repository.updateSettings(
+                    current.copyWith(language: language),
+                  );
+                },
                 onSubmit: (values) => ref
                     .read(appSettingsRepositoryProvider)
                     .updateSettings(values),

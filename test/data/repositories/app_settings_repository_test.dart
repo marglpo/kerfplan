@@ -150,7 +150,7 @@ void main() {
         final subscription = second.listen(appSettingsProvider, (_, _) {});
         try {
           expect(await second.read(appSettingsProvider.future), saved);
-          expect(secondDb.schemaVersion, 2);
+          expect(secondDb.schemaVersion, 4);
         } finally {
           subscription.close();
           second.dispose();

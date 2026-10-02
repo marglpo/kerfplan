@@ -1,7 +1,9 @@
 import 'package:drift/drift.dart';
 
 import '../../domain/models/app_preferences.dart';
+import '../../domain/models/app_language.dart';
 import '../../domain/models/app_theme_mode.dart';
+import '../../domain/models/measurement_system.dart';
 import '../../domain/repositories/app_settings_repository.dart';
 import '../../domain/units/display_unit.dart';
 import '../../domain/units/length.dart';
@@ -21,6 +23,13 @@ final class DriftAppSettingsRepository implements AppSettingsRepository {
     defaultKerf: Length.fromTicks(row.defaultKerfTicks),
     defaultReusable: Length.fromTicks(row.defaultReusableTicks),
     themeMode: AppThemeMode.fromStorage(row.themeMode),
+    language: AppLanguage.fromStorage(row.localeTag),
+    measurementSystem: row.measurementSystem == null
+        ? MeasurementSystem.fromUnit(
+            DisplayUnit.fromStorage(row.defaultDisplayUnit),
+          )
+        : MeasurementSystem.fromStorage(row.measurementSystem!),
+    onboardingCompleted: row.onboardingCompleted,
   );
 
   AppSettingsCompanion _values(AppPreferences settings) =>
@@ -30,6 +39,9 @@ final class DriftAppSettingsRepository implements AppSettingsRepository {
         defaultKerfTicks: settings.defaultKerf.ticks,
         defaultReusableTicks: settings.defaultReusable.ticks,
         themeMode: settings.themeMode.storageValue,
+        localeTag: Value(settings.language.storageTag),
+        measurementSystem: Value(settings.measurementSystem.storageValue),
+        onboardingCompleted: Value(settings.onboardingCompleted),
       );
 
   @override

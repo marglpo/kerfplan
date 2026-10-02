@@ -1,0 +1,557 @@
+{
+  "@@locale": "ru",
+  "appName": "KerfPlan",
+  "homeTitle": "KerfPlan",
+  "settingsTitle": "Настройки",
+  "newCutList": "Новый список распила",
+  "noProjectsTitle": "Списков распила пока нет",
+  "noProjectsMessage": "Спланируйте первую работу меньше чем за минуту.",
+  "appVersionLabel": "Версия приложения",
+  "defaultUnits": "Единицы по умолчанию",
+  "defaultKerf": "Ширина пропила по умолчанию",
+  "theme": "Тема",
+  "newProjectTitle": "Новый список распила",
+  "projectNameLabel": "Название проекта",
+  "projectNameHint": "Каркас гаража",
+  "materialLabel": "Материал",
+  "materialHint": "Сталь 40x20",
+  "noteLabel": "Заметка",
+  "noteHint": "Южная стена",
+  "createCutList": "Создать список распила",
+  "save": "Сохранить",
+  "editDetails": "Изменить сведения",
+  "duplicate": "Дублировать",
+  "copyLabel": "Копия",
+  "@copyLabel": {
+    "description": "Suffix for automatically generated duplicate project names."
+  },
+  "delete": "Удалить",
+  "deleteProjectTitle": "Удалить список распила?",
+  "deleteProjectMessage": "«{projectName}» будет навсегда удалён с этого устройства.",
+  "@deleteProjectMessage": {
+    "placeholders": {
+      "projectName": {
+        "type": "String"
+      }
+    }
+  },
+  "cancel": "Отмена",
+  "projectDeleted": "Список распила удалён",
+  "projectActions": "Действия для {projectName}",
+  "@projectActions": {
+    "placeholders": {
+      "projectName": {
+        "type": "String"
+      }
+    }
+  },
+  "updatedLabel": "Обновлено: {date}",
+  "@updatedLabel": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "stockSectionTitle": "Заготовки",
+  "noStockYet": "Заготовки пока не добавлены.",
+  "partsSectionTitle": "Детали",
+  "noPartsYet": "Детали пока не добавлены.",
+  "cutSettingsSectionTitle": "Настройки резки",
+  "calculate": "Рассчитать",
+  "calculateDisabledHint": "Добавьте детали, чтобы рассчитать план распила.",
+  "projectNotFound": "Список распила не найден",
+  "backToProjects": "К спискам распила",
+  "projectNameRequired": "Введите название проекта.",
+  "projectNameTooLong": "Название проекта — не более 80 символов.",
+  "materialTooLong": "Материал — не более 120 символов.",
+  "noteTooLong": "Заметка — не более 500 символов.",
+  "projectSaveError": "Не удалось сохранить список распила. Попробуйте ещё раз.",
+  "projectDeleteError": "Не удалось удалить список распила. Попробуйте ещё раз.",
+  "projectDuplicateError": "Не удалось дублировать список распила. Попробуйте ещё раз.",
+  "projectsLoadError": "Не удалось загрузить списки распила.",
+  "projectLoadError": "Не удалось загрузить этот список распила.",
+  "retry": "Повторить",
+  "fixedInventory": "Свои заготовки",
+  "buyStock": "Купить заготовки",
+  "addStockLength": "Добавить длину заготовки",
+  "editStockLength": "Изменить длину заготовки",
+  "stockLength": "Длина",
+  "quantity": "Количество",
+  "labelOptional": "Метка (необязательно)",
+  "stockLengthHint": "6000",
+  "stockLengthCmHint": "244",
+  "stockLengthMHint": "2,4",
+  "stockLabelHint": "Склад",
+  "quantityHint": "10",
+  "stockLengthRequired": "Введите длину.",
+  "stockLengthInvalid": "Введите число больше нуля.",
+  "stockLengthPrecision": "Это значение нельзя сохранить точно. Используйте длину, кратную 0,0001 мм.",
+  "stockLengthTooLarge": "Слишком большая длина.",
+  "quantityRequired": "Введите количество.",
+  "quantityInvalid": "Введите целое число от 1 до 9999.",
+  "quantityTooLarge": "Количество не должно превышать 9999.",
+  "stockLabelTooLong": "Метка — не более 80 символов.",
+  "saveStock": "Сохранить заготовку",
+  "stockSaveError": "Не удалось сохранить заготовку. Попробуйте ещё раз.",
+  "stockDeleteError": "Не удалось удалить заготовку. Попробуйте ещё раз.",
+  "stockDuplicateError": "Не удалось дублировать заготовку. Попробуйте ещё раз.",
+  "stockLoadError": "Не удалось загрузить заготовки.",
+  "stockNotFound": "Заготовка не найдена",
+  "deleteStockTitle": "Удалить заготовку?",
+  "deleteStockMessage": "{length} × {quantity} будет удалено из этого списка распила.",
+  "@deleteStockMessage": {
+    "placeholders": {
+      "length": {
+        "type": "String"
+      },
+      "quantity": {
+        "type": "int"
+      }
+    }
+  },
+  "stockDeleted": "Заготовка удалена",
+  "duplicateStock": "Дублировать заготовку",
+  "stockSummary": "{count, plural, one{{count} длина заготовки} few{{count} длины заготовок} many{{count} длин заготовок} other{{count} длины заготовки}}",
+  "@stockSummary": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "totalPieces": "{count, plural, one{Всего {count} штука} few{Всего {count} штуки} many{Всего {count} штук} other{Всего {count} штуки}}",
+  "@totalPieces": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "setBuyStockLength": "Задать длину заготовки",
+  "buyStockHelper": "Рассчитаем, сколько заготовок нужно купить.",
+  "buyStockLengthMissing": "Укажите длину заготовки, которую планируете купить.",
+  "stockModeSaveError": "Не удалось сменить режим заготовок. Попробуйте ещё раз.",
+  "backToProject": "К списку распила",
+  "decreaseQuantity": "Уменьшить количество",
+  "increaseQuantity": "Увеличить количество",
+  "unitMm": "mm",
+  "unitCm": "cm",
+  "unitM": "m",
+  "unitInch": "in",
+  "lengthWithUnit": "{value} {unit}",
+  "@lengthWithUnit": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      },
+      "unit": {
+        "type": "String"
+      }
+    }
+  },
+  "approximateLength": "≈ {value}",
+  "@approximateLength": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "stockQuantity": "× {quantity}",
+  "@stockQuantity": {
+    "placeholders": {
+      "quantity": {
+        "type": "int"
+      }
+    }
+  },
+  "stockActions": "Действия для {length}",
+  "@stockActions": {
+    "placeholders": {
+      "length": {
+        "type": "String"
+      }
+    }
+  },
+  "decimalInchesHelper": "Введите дюймы десятичным числом.",
+  "exactStoredLengthHelper": "Точное сохранённое значение: {value} мм. Значение в дюймах приблизительное. Длина останется точной, пока вы её не измените.",
+  "@exactStoredLengthHelper": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "addPart": "Добавить деталь",
+  "editPart": "Изменить деталь",
+  "partNameOptional": "Название детали (необязательно)",
+  "partNameHint": "Стойка",
+  "partNameTooLong": "Название детали — не более 100 символов.",
+  "partSaveError": "Не удалось сохранить деталь. Попробуйте ещё раз.",
+  "partDeleteError": "Не удалось удалить деталь. Попробуйте ещё раз.",
+  "partDuplicateError": "Не удалось дублировать деталь. Попробуйте ещё раз.",
+  "partLoadError": "Не удалось загрузить детали.",
+  "partNotFound": "Деталь не найдена",
+  "deletePartTitle": "Удалить деталь?",
+  "deletePartMessage": "{description} × {quantity} будет удалено из этого списка распила.",
+  "partDeleted": "Деталь удалена",
+  "duplicatePart": "Дублировать деталь",
+  "partSummary": "{count, plural, one{{count} позиция деталей} few{{count} позиции деталей} many{{count} позиций деталей} other{{count} позиции деталей}}",
+  "feet": "Футы",
+  "inches": "Дюймы",
+  "wholeInches": "Целые дюймы",
+  "fraction": "Дробь",
+  "inchesRange": "Укажите от 0 до 11 дюймов. Дополнительные футы введите в поле «Футы».",
+  "imperialLengthInvalid": "Введите неотрицательные целые числа и дробь, чтобы итог был больше нуля.",
+  "partTooLongWarning": "Эта деталь длиннее самой длинной пригодной заготовки ({length}).",
+  "addStockToContinue": "Добавьте заготовки, чтобы продолжить.",
+  "cutPlanUnavailable": "План распила пока недоступен.",
+  "namedPartLength": "{name} — {length}",
+  "@deletePartMessage": {
+    "placeholders": {
+      "description": {
+        "type": "String"
+      },
+      "quantity": {
+        "type": "int"
+      }
+    }
+  },
+  "@namedPartLength": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "length": {
+        "type": "String"
+      }
+    }
+  },
+  "@partSummary": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "@partTooLongWarning": {
+    "placeholders": {
+      "length": {
+        "type": "String"
+      }
+    }
+  },
+  "cutPlanTitle": "План распила",
+  "calculating": "Расчёт…",
+  "recalculate": "Пересчитать",
+  "editCutList": "Изменить список распила",
+  "stockPiecesUsed": "{count, plural, one{Использована {count} заготовка} few{Использовано {count} заготовки} many{Использовано {count} заготовок} other{Использовано {count} заготовки}}",
+  "stockPiecesToBuy": "{count, plural, one{Купить {count} заготовку} few{Купить {count} заготовки} many{Купить {count} заготовок} other{Купить {count} заготовки}}",
+  "buySummary": "Купить {length} × {count}",
+  "requestedParts": "Требуется деталей",
+  "placedParts": "Размещено деталей",
+  "unplacedParts": "Не размещено деталей",
+  "placedOfRequested": "Размещено {placed} из {requested, plural, one{{requested} детали} few{{requested} деталей} many{{requested} деталей} other{{requested} детали}}",
+  "totalFinishedLength": "Общая длина готовых деталей",
+  "totalStockUsed": "Общая длина использованных заготовок",
+  "totalWaste": "Общие отходы",
+  "wastePercentage": "Отходы: {value}%",
+  "reusableLeftovers": "Пригодные остатки",
+  "scrap": "Обрезки",
+  "kerfLoss": "Потери на пропил",
+  "trimLoss": "Потери на торцовку",
+  "reusable": "Пригоден",
+  "leftover": "Остаток",
+  "reusableExplanation": "Пригодны: концевые остатки не короче {threshold}. Обрезки включают пропил, торцовку и более короткие остатки.",
+  "resultMetric": "{label}: {value}",
+  "barTitle": "Заготовка {number} · {length}",
+  "partsOnBar": "{count, plural, one{{count} деталь} few{{count} детали} many{{count} деталей} other{{count} детали}}",
+  "classifiedLeftover": "{length} · {classification}",
+  "cutOrderPart": "{number}. {description}",
+  "endTrimPerEnd": "Торцовка: {length} с каждого конца",
+  "barDiagramDescription": "Заготовка {number}, {length}, {parts}, остаток {tail}.",
+  "unplacedCount": "Не размещено деталей ({count})",
+  "lengthQuantity": "{length} × {quantity}",
+  "inventoryExhaustedResultReason": "Для этой детали не осталось достаточно заготовок.",
+  "resultLoadError": "Не удалось рассчитать этот список распила.",
+  "resultValidationError": "Перед расчётом проверьте заготовки, детали и настройки резки.",
+  "stockTooShortAfterTrim": "Заготовка слишком короткая после торцовки.",
+  "validBuyStockRequired": "Перед расчётом укажите подходящую длину заготовки.",
+  "tooLongResultReason": "Эта деталь длиннее самой длинной пригодной заготовки.",
+  "@stockPiecesUsed": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "@stockPiecesToBuy": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "@buySummary": {
+    "placeholders": {
+      "length": {
+        "type": "String"
+      },
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "@placedOfRequested": {
+    "placeholders": {
+      "placed": {
+        "type": "int"
+      },
+      "requested": {
+        "type": "int"
+      }
+    }
+  },
+  "@wastePercentage": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "@reusableExplanation": {
+    "placeholders": {
+      "threshold": {
+        "type": "String"
+      }
+    }
+  },
+  "@resultMetric": {
+    "placeholders": {
+      "label": {
+        "type": "String"
+      },
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "@barTitle": {
+    "placeholders": {
+      "number": {
+        "type": "int"
+      },
+      "length": {
+        "type": "String"
+      }
+    }
+  },
+  "@partsOnBar": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "@classifiedLeftover": {
+    "placeholders": {
+      "length": {
+        "type": "String"
+      },
+      "classification": {
+        "type": "String"
+      }
+    }
+  },
+  "@cutOrderPart": {
+    "placeholders": {
+      "number": {
+        "type": "int"
+      },
+      "description": {
+        "type": "String"
+      }
+    }
+  },
+  "@endTrimPerEnd": {
+    "placeholders": {
+      "length": {
+        "type": "String"
+      }
+    }
+  },
+  "@barDiagramDescription": {
+    "placeholders": {
+      "number": {
+        "type": "int"
+      },
+      "length": {
+        "type": "String"
+      },
+      "parts": {
+        "type": "String"
+      },
+      "tail": {
+        "type": "String"
+      }
+    }
+  },
+  "@unplacedCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "@lengthQuantity": {
+    "placeholders": {
+      "length": {
+        "type": "String"
+      },
+      "quantity": {
+        "type": "int"
+      }
+    }
+  },
+  "editCutSettings": "Изменить настройки резки",
+  "units": "Единицы",
+  "unitFtIn": "ft + in",
+  "millimeters": "Миллиметры",
+  "centimeters": "Сантиметры",
+  "meters": "Метры",
+  "feetAndInches": "Футы и дюймы",
+  "kerf": "Ширина пропила",
+  "kerfHelper": "Материал, удаляемый между соседними деталями.",
+  "kerfFinalPartHelper": "После последней детали на заготовке пропил не добавляется.",
+  "endTrimEachEnd": "Торцовка (с каждого конца)",
+  "endTrimHelper": "Срежьте эту длину с каждого конца каждой заготовки.",
+  "reusableLeftover": "Пригодный остаток",
+  "reusableLeftoverHelper": "Остатки такой длины и длиннее считаются пригодными.",
+  "cutSettingsSaveError": "Не удалось сохранить настройки резки. Попробуйте ещё раз.",
+  "noUsableStockAfterTrim": "После торцовки не остаётся пригодной длины заготовки.",
+  "someStockUnusableAfterTrim": "Некоторые заготовки слишком короткие после торцовки.",
+  "nonnegativeLengthInvalid": "Введите число не меньше нуля.",
+  "nonnegativeImperialInvalid": "Введите неотрицательные целые числа и дробь.",
+  "share": "Поделиться",
+  "shareCutPlan": "Поделиться планом распила",
+  "shareText": "Поделиться текстом",
+  "sharePdf": "Поделиться PDF",
+  "copyBuyList": "Скопировать список покупок",
+  "buyListCopied": "Список покупок скопирован",
+  "creatingPdf": "Создание PDF…",
+  "pdfCreateError": "Не удалось создать PDF. Попробуйте ещё раз.",
+  "shareError": "Не удалось поделиться планом распила. Попробуйте ещё раз.",
+  "buyListCopyError": "Не удалось скопировать список покупок. Попробуйте ещё раз.",
+  "reportSummary": "Сводка",
+  "reportPurchase": "Закупка",
+  "generatedLabel": "Создано",
+  "generatedBy": "Создано в {appName}",
+  "@generatedBy": {
+    "placeholders": {
+      "appName": {
+        "type": "String"
+      }
+    }
+  },
+  "verifyBeforeCutting": "Планы распила помогают планировать работу. Перед резкой проверьте каждый размер на заготовке и соблюдайте правила безопасности при работе с инструментом.",
+  "reportFileFallback": "План распила",
+  "addLeftoversToStock": "Добавить остатки к заготовкам",
+  "addLeftoversTitle": "Добавить остатки к заготовкам?",
+  "addLeftoversMessage": "Эти пригодные остатки будут добавлены к запасу заготовок проекта для будущих планов распила.",
+  "addLeftoversFutureHint": "Добавляйте их после выполнения распила.",
+  "addToStock": "Добавить к заготовкам",
+  "leftoversAddedToStock": "Пригодные остатки добавлены для будущих планов распила.",
+  "leftoversAddError": "Не удалось добавить остатки. Попробуйте ещё раз.",
+  "reusablePieces": "{count, plural, one{{count} пригодный остаток} few{{count} пригодных остатка} many{{count} пригодных остатков} other{{count} пригодного остатка}}",
+  "@reusablePieces": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "saveAndAddAnother": "Сохранить и добавить ещё",
+  "defaultsSectionTitle": "Значения по умолчанию",
+  "appearanceSectionTitle": "Оформление",
+  "defaultReusableLeftover": "Размер пригодного остатка по умолчанию",
+  "newProjectsDefaultsHelper": "Эти значения применяются к новым спискам распила. Существующие списки не изменятся.",
+  "defaultReusableHelper": "В новых проектах остатки такой длины и длиннее считаются пригодными.",
+  "themeSystem": "Системная",
+  "themeLight": "Светлая",
+  "themeDark": "Тёмная",
+  "settingsSaveError": "Не удалось сохранить настройки. Попробуйте ещё раз.",
+  "settingsLoadError": "Не удалось загрузить настройки.",
+  "settingsSaved": "Настройки сохранены",
+  "language": "Язык",
+  "languageSystem": "Как в системе",
+  "languageEnglish": "English",
+  "languageSpanish": "Español",
+  "languageGerman": "Deutsch",
+  "languageFrench": "Français",
+  "languagePortugueseBrazil": "Português (Brasil)",
+  "languageItalian": "Italiano",
+  "languagePolish": "Polski",
+  "languageRussian": "Русский",
+  "languageTurkish": "Türkçe",
+  "languageUkrainian": "Українська",
+  "proTitle": "KerfPlan Pro",
+  "upgradeOnce": "Купите один раз. Пользуйтесь всегда.",
+  "noSubscription": "Без подписки.",
+  "lifetimePro": "Pro навсегда",
+  "removeAds": "Убрать рекламу",
+  "unlockLifetimePro": "Открыть Pro навсегда — {price}",
+  "@unlockLifetimePro": {
+    "placeholders": {
+      "price": {
+        "type": "String"
+      }
+    }
+  },
+  "removeAdsCta": "Убрать рекламу — {price}",
+  "@removeAdsCta": {
+    "placeholders": {
+      "price": {
+        "type": "String"
+      }
+    }
+  },
+  "proActive": "Pro навсегда активен",
+  "adFreeActive": "Без рекламы",
+  "includedWithPro": "Входит в Pro навсегда",
+  "removeAdsDescription": "Сохраните бесплатные функции и уберите рекламу.",
+  "restorePurchases": "Восстановить покупки",
+  "restoringPurchases": "Восстановление покупок…",
+  "purchasesRestored": "Покупки восстановлены",
+  "lifetimeProRestored": "Pro навсегда восстановлен",
+  "adFreeRestored": "Режим без рекламы восстановлен",
+  "nothingToRestore": "Нечего восстанавливать",
+  "purchasePending": "Покупка ожидает оплаты",
+  "purchasePendingMessage": "Google Play ещё обрабатывает оплату вашей покупки.",
+  "purchaseError": "Не удалось завершить покупку. Попробуйте ещё раз.",
+  "restoreError": "Не удалось восстановить покупки. Попробуйте ещё раз.",
+  "billingUnavailable": "Покупки сейчас недоступны.",
+  "productUnavailable": "Временно недоступно.",
+  "processingPurchase": "Проверка покупки…",
+  "purchaseVerified": "Покупка проверена",
+  "kerfPlanFree": "KerfPlan Бесплатно",
+  "viewPro": "Смотреть Pro",
+  "upgrade": "Улучшить",
+  "benefitUnlimitedProjects": "Списки распила без ограничений",
+  "benefitMultipleStocks": "Несколько длин заготовок",
+  "benefitPdf": "Экспорт PDF для мастерской",
+  "benefitReuseLeftovers": "Повторное использование остатков",
+  "benefitNoAds": "Без рекламы",
+  "onboardingIntro": "Планируйте линейный раскрой с меньшими отходами.",
+  "howDoYouMeasure": "В каких единицах вы измеряете?",
+  "metric": "Метрическая",
+  "imperial": "Имперская",
+  "metricDescription": "Миллиметры, сантиметры и метры",
+  "imperialDescription": "Дюймы и футы",
+  "recommendedForRegion": "Рекомендуется для вашего региона",
+  "continueAction": "Продолжить",
+  "measurementCanChangeLater": "Позже это можно изменить в настройках.",
+  "measurements": "Измерения",
+  "measurementSystem": "Система измерения",
+  "commonLengths": "Типовые длины"
+}

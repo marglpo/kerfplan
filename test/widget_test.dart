@@ -1,3 +1,5 @@
+import 'support/app_ready.dart';
+
 import 'package:drift/native.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -44,6 +46,7 @@ void main() {
     );
     addTearDown(container.dispose);
     if (route != null) container.read(routerProvider).go(route);
+    await completeOnboarding(db);
     await tester.pumpWidget(
       UncontrolledProviderScope(
         container: container,

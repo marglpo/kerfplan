@@ -1,3 +1,5 @@
+import 'support/app_ready.dart';
+
 import 'dart:async';
 
 import 'package:flutter/material.dart';
@@ -80,6 +82,7 @@ void main() {
     );
     addTearDown(container.dispose);
     container.read(routerProvider).go('/projects/${fixture.id}/result');
+    await completeOnboarding(fixture.db);
     await tester.pumpWidget(
       UncontrolledProviderScope(
         container: container,
@@ -290,7 +293,7 @@ void main() {
     expect(after.updatedAt, before.updatedAt);
     expect(after.revision, before.revision);
     expect(after.lastRunId, before.lastRunId);
-    expect(fixture.db.schemaVersion, 2);
+    expect(fixture.db.schemaVersion, 4);
   });
 
   testWidgets('deleted result has no Share action', (tester) async {

@@ -1,0 +1,557 @@
+{
+  "@@locale": "uk",
+  "appName": "KerfPlan",
+  "homeTitle": "KerfPlan",
+  "settingsTitle": "Налаштування",
+  "newCutList": "Новий список розкрою",
+  "noProjectsTitle": "Списків розкрою ще немає",
+  "noProjectsMessage": "Сплануйте першу роботу менш ніж за хвилину.",
+  "appVersionLabel": "Версія застосунку",
+  "defaultUnits": "Одиниці за замовчуванням",
+  "defaultKerf": "Ширина пропилу за замовчуванням",
+  "theme": "Тема",
+  "newProjectTitle": "Новий список розкрою",
+  "projectNameLabel": "Назва проєкту",
+  "projectNameHint": "Каркас гаража",
+  "materialLabel": "Матеріал",
+  "materialHint": "Сталь 40x20",
+  "noteLabel": "Нотатка",
+  "noteHint": "Південна стіна",
+  "createCutList": "Створити список розкрою",
+  "save": "Зберегти",
+  "editDetails": "Змінити відомості",
+  "duplicate": "Дублювати",
+  "copyLabel": "Копія",
+  "@copyLabel": {
+    "description": "Suffix for automatically generated duplicate project names."
+  },
+  "delete": "Видалити",
+  "deleteProjectTitle": "Видалити список розкрою?",
+  "deleteProjectMessage": "«{projectName}» буде назавжди видалено з цього пристрою.",
+  "@deleteProjectMessage": {
+    "placeholders": {
+      "projectName": {
+        "type": "String"
+      }
+    }
+  },
+  "cancel": "Скасувати",
+  "projectDeleted": "Список розкрою видалено",
+  "projectActions": "Дії для {projectName}",
+  "@projectActions": {
+    "placeholders": {
+      "projectName": {
+        "type": "String"
+      }
+    }
+  },
+  "updatedLabel": "Оновлено: {date}",
+  "@updatedLabel": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "stockSectionTitle": "Заготовки",
+  "noStockYet": "Заготовок ще не додано.",
+  "partsSectionTitle": "Деталі",
+  "noPartsYet": "Деталей ще не додано.",
+  "cutSettingsSectionTitle": "Налаштування різання",
+  "calculate": "Розрахувати",
+  "calculateDisabledHint": "Додайте деталі, щоб розрахувати план розкрою.",
+  "projectNotFound": "Список розкрою не знайдено",
+  "backToProjects": "До списків розкрою",
+  "projectNameRequired": "Введіть назву проєкту.",
+  "projectNameTooLong": "Назва проєкту — не більш ніж 80 символів.",
+  "materialTooLong": "Матеріал — не більш ніж 120 символів.",
+  "noteTooLong": "Нотатка — не більш ніж 500 символів.",
+  "projectSaveError": "Не вдалося зберегти список розкрою. Спробуйте ще раз.",
+  "projectDeleteError": "Не вдалося видалити список розкрою. Спробуйте ще раз.",
+  "projectDuplicateError": "Не вдалося дублювати список розкрою. Спробуйте ще раз.",
+  "projectsLoadError": "Не вдалося завантажити списки розкрою.",
+  "projectLoadError": "Не вдалося завантажити цей список розкрою.",
+  "retry": "Повторити",
+  "fixedInventory": "Власні заготовки",
+  "buyStock": "Купити заготовки",
+  "addStockLength": "Додати довжину заготовки",
+  "editStockLength": "Змінити довжину заготовки",
+  "stockLength": "Довжина",
+  "quantity": "Кількість",
+  "labelOptional": "Позначка (необов'язково)",
+  "stockLengthHint": "6000",
+  "stockLengthCmHint": "244",
+  "stockLengthMHint": "2,4",
+  "stockLabelHint": "Склад",
+  "quantityHint": "10",
+  "stockLengthRequired": "Введіть довжину.",
+  "stockLengthInvalid": "Введіть число більше нуля.",
+  "stockLengthPrecision": "Це значення неможливо зберегти точно. Використайте довжину, кратну 0,0001 мм.",
+  "stockLengthTooLarge": "Надто велика довжина.",
+  "quantityRequired": "Введіть кількість.",
+  "quantityInvalid": "Введіть ціле число від 1 до 9999.",
+  "quantityTooLarge": "Кількість не може перевищувати 9999.",
+  "stockLabelTooLong": "Позначка — не більш ніж 80 символів.",
+  "saveStock": "Зберегти заготовку",
+  "stockSaveError": "Не вдалося зберегти заготовку. Спробуйте ще раз.",
+  "stockDeleteError": "Не вдалося видалити заготовку. Спробуйте ще раз.",
+  "stockDuplicateError": "Не вдалося дублювати заготовку. Спробуйте ще раз.",
+  "stockLoadError": "Не вдалося завантажити заготовки.",
+  "stockNotFound": "Заготовку не знайдено",
+  "deleteStockTitle": "Видалити заготовку?",
+  "deleteStockMessage": "{length} × {quantity} буде видалено з цього списку розкрою.",
+  "@deleteStockMessage": {
+    "placeholders": {
+      "length": {
+        "type": "String"
+      },
+      "quantity": {
+        "type": "int"
+      }
+    }
+  },
+  "stockDeleted": "Заготовку видалено",
+  "duplicateStock": "Дублювати заготовку",
+  "stockSummary": "{count, plural, one{{count} довжина заготовки} few{{count} довжини заготовок} many{{count} довжин заготовок} other{{count} довжини заготовки}}",
+  "@stockSummary": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "totalPieces": "{count, plural, one{Усього {count} штука} few{Усього {count} штуки} many{Усього {count} штук} other{Усього {count} штуки}}",
+  "@totalPieces": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "setBuyStockLength": "Задати довжину заготовки",
+  "buyStockHelper": "Розрахуємо, скільки заготовок потрібно купити.",
+  "buyStockLengthMissing": "Укажіть довжину заготовки, яку плануєте купити.",
+  "stockModeSaveError": "Не вдалося змінити режим заготовок. Спробуйте ще раз.",
+  "backToProject": "До списку розкрою",
+  "decreaseQuantity": "Зменшити кількість",
+  "increaseQuantity": "Збільшити кількість",
+  "unitMm": "mm",
+  "unitCm": "cm",
+  "unitM": "m",
+  "unitInch": "in",
+  "lengthWithUnit": "{value} {unit}",
+  "@lengthWithUnit": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      },
+      "unit": {
+        "type": "String"
+      }
+    }
+  },
+  "approximateLength": "≈ {value}",
+  "@approximateLength": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "stockQuantity": "× {quantity}",
+  "@stockQuantity": {
+    "placeholders": {
+      "quantity": {
+        "type": "int"
+      }
+    }
+  },
+  "stockActions": "Дії для {length}",
+  "@stockActions": {
+    "placeholders": {
+      "length": {
+        "type": "String"
+      }
+    }
+  },
+  "decimalInchesHelper": "Введіть дюйми десятковим числом.",
+  "exactStoredLengthHelper": "Точне збережене значення: {value} мм. Значення в дюймах приблизне. Довжина залишиться точною, доки ви її не зміните.",
+  "@exactStoredLengthHelper": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "addPart": "Додати деталь",
+  "editPart": "Змінити деталь",
+  "partNameOptional": "Назва деталі (необов'язково)",
+  "partNameHint": "Стійка",
+  "partNameTooLong": "Назва деталі — не більш ніж 100 символів.",
+  "partSaveError": "Не вдалося зберегти деталь. Спробуйте ще раз.",
+  "partDeleteError": "Не вдалося видалити деталь. Спробуйте ще раз.",
+  "partDuplicateError": "Не вдалося дублювати деталь. Спробуйте ще раз.",
+  "partLoadError": "Не вдалося завантажити деталі.",
+  "partNotFound": "Деталь не знайдено",
+  "deletePartTitle": "Видалити деталь?",
+  "deletePartMessage": "{description} × {quantity} буде видалено з цього списку розкрою.",
+  "partDeleted": "Деталь видалено",
+  "duplicatePart": "Дублювати деталь",
+  "partSummary": "{count, plural, one{{count} позиція деталей} few{{count} позиції деталей} many{{count} позицій деталей} other{{count} позиції деталей}}",
+  "feet": "Фути",
+  "inches": "Дюйми",
+  "wholeInches": "Цілі дюйми",
+  "fraction": "Дріб",
+  "inchesRange": "Укажіть від 0 до 11 дюймів. Додаткові фути введіть у полі «Фути».",
+  "imperialLengthInvalid": "Введіть невід'ємні цілі числа й дріб, щоб результат був більшим за нуль.",
+  "partTooLongWarning": "Ця деталь довша за найдовшу придатну заготовку ({length}).",
+  "addStockToContinue": "Додайте заготовки, щоб продовжити.",
+  "cutPlanUnavailable": "План розкрою поки недоступний.",
+  "namedPartLength": "{name} — {length}",
+  "@deletePartMessage": {
+    "placeholders": {
+      "description": {
+        "type": "String"
+      },
+      "quantity": {
+        "type": "int"
+      }
+    }
+  },
+  "@namedPartLength": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "length": {
+        "type": "String"
+      }
+    }
+  },
+  "@partSummary": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "@partTooLongWarning": {
+    "placeholders": {
+      "length": {
+        "type": "String"
+      }
+    }
+  },
+  "cutPlanTitle": "План розкрою",
+  "calculating": "Розрахунок…",
+  "recalculate": "Перерахувати",
+  "editCutList": "Змінити список розкрою",
+  "stockPiecesUsed": "{count, plural, one{Використано {count} заготовку} few{Використано {count} заготовки} many{Використано {count} заготовок} other{Використано {count} заготовки}}",
+  "stockPiecesToBuy": "{count, plural, one{Купити {count} заготовку} few{Купити {count} заготовки} many{Купити {count} заготовок} other{Купити {count} заготовки}}",
+  "buySummary": "Купити {length} × {count}",
+  "requestedParts": "Потрібно деталей",
+  "placedParts": "Розміщено деталей",
+  "unplacedParts": "Не розміщено деталей",
+  "placedOfRequested": "Розміщено {placed} із {requested, plural, one{{requested} деталі} few{{requested} деталей} many{{requested} деталей} other{{requested} деталі}}",
+  "totalFinishedLength": "Загальна довжина готових деталей",
+  "totalStockUsed": "Загальна довжина використаних заготовок",
+  "totalWaste": "Загальні відходи",
+  "wastePercentage": "Відходи: {value}%",
+  "reusableLeftovers": "Придатні залишки",
+  "scrap": "Обрізки",
+  "kerfLoss": "Втрати на пропил",
+  "trimLoss": "Втрати на торцювання",
+  "reusable": "Придатний",
+  "leftover": "Залишок",
+  "reusableExplanation": "Придатні: кінцеві залишки не коротші за {threshold}. Обрізки включають пропил, торцювання та коротші залишки.",
+  "resultMetric": "{label}: {value}",
+  "barTitle": "Заготовка {number} · {length}",
+  "partsOnBar": "{count, plural, one{{count} деталь} few{{count} деталі} many{{count} деталей} other{{count} деталі}}",
+  "classifiedLeftover": "{length} · {classification}",
+  "cutOrderPart": "{number}. {description}",
+  "endTrimPerEnd": "Торцювання: {length} з кожного кінця",
+  "barDiagramDescription": "Заготовка {number}, {length}, {parts}, залишок {tail}.",
+  "unplacedCount": "Не розміщено деталей ({count})",
+  "lengthQuantity": "{length} × {quantity}",
+  "inventoryExhaustedResultReason": "Для цієї деталі не залишилося достатньо заготовок.",
+  "resultLoadError": "Не вдалося розрахувати цей список розкрою.",
+  "resultValidationError": "Перед розрахунком перевірте заготовки, деталі й налаштування різання.",
+  "stockTooShortAfterTrim": "Заготовка надто коротка після торцювання.",
+  "validBuyStockRequired": "Перед розрахунком укажіть належну довжину заготовки.",
+  "tooLongResultReason": "Ця деталь довша за найдовшу придатну заготовку.",
+  "@stockPiecesUsed": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "@stockPiecesToBuy": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "@buySummary": {
+    "placeholders": {
+      "length": {
+        "type": "String"
+      },
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "@placedOfRequested": {
+    "placeholders": {
+      "placed": {
+        "type": "int"
+      },
+      "requested": {
+        "type": "int"
+      }
+    }
+  },
+  "@wastePercentage": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "@reusableExplanation": {
+    "placeholders": {
+      "threshold": {
+        "type": "String"
+      }
+    }
+  },
+  "@resultMetric": {
+    "placeholders": {
+      "label": {
+        "type": "String"
+      },
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "@barTitle": {
+    "placeholders": {
+      "number": {
+        "type": "int"
+      },
+      "length": {
+        "type": "String"
+      }
+    }
+  },
+  "@partsOnBar": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "@classifiedLeftover": {
+    "placeholders": {
+      "length": {
+        "type": "String"
+      },
+      "classification": {
+        "type": "String"
+      }
+    }
+  },
+  "@cutOrderPart": {
+    "placeholders": {
+      "number": {
+        "type": "int"
+      },
+      "description": {
+        "type": "String"
+      }
+    }
+  },
+  "@endTrimPerEnd": {
+    "placeholders": {
+      "length": {
+        "type": "String"
+      }
+    }
+  },
+  "@barDiagramDescription": {
+    "placeholders": {
+      "number": {
+        "type": "int"
+      },
+      "length": {
+        "type": "String"
+      },
+      "parts": {
+        "type": "String"
+      },
+      "tail": {
+        "type": "String"
+      }
+    }
+  },
+  "@unplacedCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "@lengthQuantity": {
+    "placeholders": {
+      "length": {
+        "type": "String"
+      },
+      "quantity": {
+        "type": "int"
+      }
+    }
+  },
+  "editCutSettings": "Змінити налаштування різання",
+  "units": "Одиниці",
+  "unitFtIn": "ft + in",
+  "millimeters": "Міліметри",
+  "centimeters": "Сантиметри",
+  "meters": "Метри",
+  "feetAndInches": "Фути й дюйми",
+  "kerf": "Ширина пропилу",
+  "kerfHelper": "Матеріал, що видаляється між сусідніми деталями.",
+  "kerfFinalPartHelper": "Після останньої деталі на заготовці пропил не додається.",
+  "endTrimEachEnd": "Торцювання (з кожного кінця)",
+  "endTrimHelper": "Відріжте цю довжину з кожного кінця кожної заготовки.",
+  "reusableLeftover": "Придатний залишок",
+  "reusableLeftoverHelper": "Залишки такої довжини й довші вважаються придатними.",
+  "cutSettingsSaveError": "Не вдалося зберегти налаштування різання. Спробуйте ще раз.",
+  "noUsableStockAfterTrim": "Після торцювання не залишається придатної довжини заготовки.",
+  "someStockUnusableAfterTrim": "Деякі заготовки надто короткі після торцювання.",
+  "nonnegativeLengthInvalid": "Введіть число не менше нуля.",
+  "nonnegativeImperialInvalid": "Введіть невід'ємні цілі числа й дріб.",
+  "share": "Поділитися",
+  "shareCutPlan": "Поділитися планом розкрою",
+  "shareText": "Поділитися текстом",
+  "sharePdf": "Поділитися PDF",
+  "copyBuyList": "Скопіювати список покупок",
+  "buyListCopied": "Список покупок скопійовано",
+  "creatingPdf": "Створення PDF…",
+  "pdfCreateError": "Не вдалося створити PDF. Спробуйте ще раз.",
+  "shareError": "Не вдалося поділитися планом розкрою. Спробуйте ще раз.",
+  "buyListCopyError": "Не вдалося скопіювати список покупок. Спробуйте ще раз.",
+  "reportSummary": "Підсумок",
+  "reportPurchase": "Закупівля",
+  "generatedLabel": "Створено",
+  "generatedBy": "Створено в {appName}",
+  "@generatedBy": {
+    "placeholders": {
+      "appName": {
+        "type": "String"
+      }
+    }
+  },
+  "verifyBeforeCutting": "Плани розкрою допомагають планувати роботу. Перед різанням перевірте кожен розмір на заготовці й дотримуйтеся правил безпеки під час роботи з інструментом.",
+  "reportFileFallback": "План розкрою",
+  "addLeftoversToStock": "Додати залишки до заготовок",
+  "addLeftoversTitle": "Додати залишки до заготовок?",
+  "addLeftoversMessage": "Ці придатні залишки буде додано до запасу заготовок проєкту для майбутніх планів розкрою.",
+  "addLeftoversFutureHint": "Додавайте їх після завершення різання.",
+  "addToStock": "Додати до заготовок",
+  "leftoversAddedToStock": "Придатні залишки додано для майбутніх планів розкрою.",
+  "leftoversAddError": "Не вдалося додати залишки. Спробуйте ще раз.",
+  "reusablePieces": "{count, plural, one{{count} придатний залишок} few{{count} придатні залишки} many{{count} придатних залишків} other{{count} придатного залишку}}",
+  "@reusablePieces": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "saveAndAddAnother": "Зберегти й додати ще",
+  "defaultsSectionTitle": "Типові значення",
+  "appearanceSectionTitle": "Вигляд",
+  "defaultReusableLeftover": "Типовий розмір придатного залишку",
+  "newProjectsDefaultsHelper": "Ці значення застосовуються до нових списків розкрою. Наявні списки не зміняться.",
+  "defaultReusableHelper": "У нових проєктах залишки такої довжини й довші вважаються придатними.",
+  "themeSystem": "Системна",
+  "themeLight": "Світла",
+  "themeDark": "Темна",
+  "settingsSaveError": "Не вдалося зберегти налаштування. Спробуйте ще раз.",
+  "settingsLoadError": "Не вдалося завантажити налаштування.",
+  "settingsSaved": "Налаштування збережено",
+  "language": "Мова",
+  "languageSystem": "Як у системі",
+  "languageEnglish": "English",
+  "languageSpanish": "Español",
+  "languageGerman": "Deutsch",
+  "languageFrench": "Français",
+  "languagePortugueseBrazil": "Português (Brasil)",
+  "languageItalian": "Italiano",
+  "languagePolish": "Polski",
+  "languageRussian": "Русский",
+  "languageTurkish": "Türkçe",
+  "languageUkrainian": "Українська",
+  "proTitle": "KerfPlan Pro",
+  "upgradeOnce": "Придбайте один раз. Користуйтеся завжди.",
+  "noSubscription": "Без передплати.",
+  "lifetimePro": "Pro назавжди",
+  "removeAds": "Прибрати рекламу",
+  "unlockLifetimePro": "Відкрити Pro назавжди — {price}",
+  "@unlockLifetimePro": {
+    "placeholders": {
+      "price": {
+        "type": "String"
+      }
+    }
+  },
+  "removeAdsCta": "Прибрати рекламу — {price}",
+  "@removeAdsCta": {
+    "placeholders": {
+      "price": {
+        "type": "String"
+      }
+    }
+  },
+  "proActive": "Pro назавжди активний",
+  "adFreeActive": "Без реклами",
+  "includedWithPro": "Входить до Pro назавжди",
+  "removeAdsDescription": "Залиште безкоштовні функції та приберіть рекламу.",
+  "restorePurchases": "Відновити покупки",
+  "restoringPurchases": "Відновлення покупок…",
+  "purchasesRestored": "Покупки відновлено",
+  "lifetimeProRestored": "Pro назавжди відновлено",
+  "adFreeRestored": "Режим без реклами відновлено",
+  "nothingToRestore": "Немає покупок для відновлення",
+  "purchasePending": "Покупка очікує оплати",
+  "purchasePendingMessage": "Google Play ще обробляє оплату вашої покупки.",
+  "purchaseError": "Не вдалося завершити покупку. Спробуйте ще раз.",
+  "restoreError": "Не вдалося відновити покупки. Спробуйте ще раз.",
+  "billingUnavailable": "Покупки зараз недоступні.",
+  "productUnavailable": "Тимчасово недоступно.",
+  "processingPurchase": "Перевірка покупки…",
+  "purchaseVerified": "Покупку перевірено",
+  "kerfPlanFree": "KerfPlan Безкоштовно",
+  "viewPro": "Переглянути Pro",
+  "upgrade": "Покращити",
+  "benefitUnlimitedProjects": "Списки розкрою без обмежень",
+  "benefitMultipleStocks": "Кілька довжин заготовок",
+  "benefitPdf": "Експорт PDF для майстерні",
+  "benefitReuseLeftovers": "Повторне використання залишків",
+  "benefitNoAds": "Без реклами",
+  "onboardingIntro": "Плануйте лінійний розкрій із меншими відходами.",
+  "howDoYouMeasure": "У яких одиницях ви вимірюєте?",
+  "metric": "Метрична",
+  "imperial": "Імперська",
+  "metricDescription": "Міліметри, сантиметри та метри",
+  "imperialDescription": "Дюйми та фути",
+  "recommendedForRegion": "Рекомендовано для вашого регіону",
+  "continueAction": "Продовжити",
+  "measurementCanChangeLater": "Пізніше це можна змінити в налаштуваннях.",
+  "measurements": "Вимірювання",
+  "measurementSystem": "Система вимірювання",
+  "commonLengths": "Типові довжини"
+}

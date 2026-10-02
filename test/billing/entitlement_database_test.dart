@@ -8,7 +8,7 @@ import 'package:kerfplan/domain/billing/billing_product.dart';
 import 'package:kerfplan/domain/billing/entitlements.dart';
 
 void main() {
-  test('real populated v1 fixture upgrades to v2 preserving every original row and relationship', () async {
+  test('real populated v1 fixture upgrades through v4 preserving every original row and relationship', () async {
     final dir = await Directory.systemTemp.createTemp('kerfplan-v2-');
     final file = await File('test/fixtures/schema_v1.sqlite')
         .copy('${dir.path}/migration.sqlite');
@@ -44,12 +44,18 @@ void main() {
         (await db.customSelect('PRAGMA user_version').getSingle()).read<int>(
           'user_version',
         ),
-        2,
+        4,
       );
       for (final table in tables) {
         expect([
           for (final row in await db.customSelect('SELECT * FROM $table').get())
-            row.data,
+            if (table == 'app_settings')
+              Map.of(row.data)
+                ..remove('locale_tag')
+                ..remove('measurement_system')
+                ..remove('onboarding_completed')
+            else
+              row.data,
         ], before[table]);
       }
       final project = await db.select(db.projects).getSingle();

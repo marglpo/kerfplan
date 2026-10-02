@@ -72,6 +72,26 @@ class LengthEditingController extends TextEditingController {
     notifyListeners();
   }
 
+  /// Enter an exact preset without converting through formatted display text.
+  void setExactLength(Length exact) {
+    final components = ImperialLength.components(
+      exact,
+      feetAndInches: _unit == DisplayUnit.ftIn,
+    );
+    _rebasing = true;
+    _initialLength = exact;
+    _initialText = DecimalLength.format(exact, _unit).text;
+    _imperialEdited = false;
+    _sixteenths = components.sixteenths;
+    _feetText = '${components.feet}';
+    _inchesText = '${components.inches}';
+    feet.text = _feetText;
+    inches.text = _inchesText;
+    text = _initialText;
+    _rebasing = false;
+    notifyListeners();
+  }
+
   bool get isImperial => unit == DisplayUnit.inch || unit == DisplayUnit.ftIn;
 
   /// Start a new entry without retaining an exact value or imperial components.
@@ -182,7 +202,12 @@ class LengthInputField extends StatelessWidget {
         textInputAction: TextInputAction.next,
         decoration: InputDecoration(
           labelText: label ?? l10n.stockLength,
-          hintText: l10n.stockLengthHint,
+          hintText: switch (controller.unit) {
+            DisplayUnit.mm => l10n.stockLengthHint,
+            DisplayUnit.cm => l10n.stockLengthCmHint,
+            DisplayUnit.m => l10n.stockLengthMHint,
+            DisplayUnit.inch || DisplayUnit.ftIn => null,
+          },
           suffixText: unitLabel(l10n, controller.unit),
           errorMaxLines: 4,
         ),

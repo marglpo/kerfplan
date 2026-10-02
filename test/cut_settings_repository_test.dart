@@ -105,7 +105,7 @@ void main() {
         (await fixture.parts.getPartLines(fixture.id)).single.id,
         parts.single.id,
       );
-      expect(fixture.db.schemaVersion, 2);
+      expect(fixture.db.schemaVersion, 4);
     },
   );
 

@@ -48,9 +48,9 @@ void main() {
       );
 
   test(
-    'schema v2 inserts project and lines, then cascades only its children',
+    'schema v4 inserts project and lines, then cascades only its children',
     () async {
-      expect(database.schemaVersion, 2);
+      expect(database.schemaVersion, 4);
       await database.into(database.projects).insert(project('first'));
       await database.into(database.projects).insert(project('second'));
       await database

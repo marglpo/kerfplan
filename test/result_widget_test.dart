@@ -1,3 +1,5 @@
+import 'support/app_ready.dart';
+
 import 'dart:async';
 
 import 'package:flutter/material.dart';
@@ -44,6 +46,7 @@ void main() {
     container
         .read(routerProvider)
         .go('/projects/${projectId ?? fixture.id}${result ? '/result' : ''}');
+    await completeOnboarding(fixture.db);
     await tester.pumpWidget(
       UncontrolledProviderScope(
         container: container,

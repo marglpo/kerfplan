@@ -186,6 +186,12 @@ class AppLocalizationsEn extends AppLocalizations {
   String get stockLengthHint => '6000';
 
   @override
+  String get stockLengthCmHint => '244';
+
+  @override
+  String get stockLengthMHint => '2.4';
+
+  @override
   String get stockLabelHint => 'Warehouse';
 
   @override
@@ -474,7 +480,13 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String placedOfRequested(int placed, int requested) {
-    return 'Placed $placed of $requested parts';
+    String _temp0 = intl.Intl.pluralLogic(
+      requested,
+      locale: localeName,
+      other: '$requested parts',
+      one: '1 part',
+    );
+    return 'Placed $placed of $_temp0';
   }
 
   @override
@@ -780,6 +792,42 @@ class AppLocalizationsEn extends AppLocalizations {
   String get settingsSaved => 'Settings saved';
 
   @override
+  String get language => 'Language';
+
+  @override
+  String get languageSystem => 'System default';
+
+  @override
+  String get languageEnglish => 'English';
+
+  @override
+  String get languageSpanish => 'Español';
+
+  @override
+  String get languageGerman => 'Deutsch';
+
+  @override
+  String get languageFrench => 'Français';
+
+  @override
+  String get languagePortugueseBrazil => 'Português (Brasil)';
+
+  @override
+  String get languageItalian => 'Italiano';
+
+  @override
+  String get languagePolish => 'Polski';
+
+  @override
+  String get languageRussian => 'Русский';
+
+  @override
+  String get languageTurkish => 'Türkçe';
+
+  @override
+  String get languageUkrainian => 'Українська';
+
+  @override
   String get proTitle => 'KerfPlan Pro';
 
   @override
@@ -883,4 +931,41 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get benefitNoAds => 'No ads';
+
+  @override
+  String get onboardingIntro => 'Plan linear cuts with less waste.';
+
+  @override
+  String get howDoYouMeasure => 'How do you measure?';
+
+  @override
+  String get metric => 'Metric';
+
+  @override
+  String get imperial => 'Imperial';
+
+  @override
+  String get metricDescription => 'Millimeters, centimeters and meters';
+
+  @override
+  String get imperialDescription => 'Inches and feet';
+
+  @override
+  String get recommendedForRegion => 'Recommended for your region';
+
+  @override
+  String get continueAction => 'Continue';
+
+  @override
+  String get measurementCanChangeLater =>
+      'You can change this later in Settings.';
+
+  @override
+  String get measurements => 'Measurements';
+
+  @override
+  String get measurementSystem => 'Measurement system';
+
+  @override
+  String get commonLengths => 'Common lengths';
 }

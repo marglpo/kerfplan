@@ -1,3 +1,5 @@
+import 'support/app_ready.dart';
+
 import 'package:drift/native.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -53,6 +55,7 @@ void main() {
     );
     addTearDown(container.dispose);
     container.read(routerProvider).go(path ?? '/projects/$projectId');
+    await completeOnboarding(db);
     await tester.pumpWidget(
       UncontrolledProviderScope(
         container: container,
@@ -65,6 +68,15 @@ void main() {
 
   Future<void> tapText(WidgetTester tester, String text) async {
     final finder = find.text(text);
+    if (text == 'Save stock length') {
+      tester.testTextInput.hide();
+      await tester.pumpAndSettle();
+      await tester.dragUntilVisible(
+        finder.first,
+        find.byType(SingleChildScrollView).last,
+        const Offset(0, -250),
+      );
+    }
     await tester.ensureVisible(finder.first);
     await tester.pumpAndSettle();
     await tester.tap(finder.first);

@@ -1,0 +1,557 @@
+{
+  "@@locale": "pl",
+  "appName": "KerfPlan",
+  "homeTitle": "KerfPlan",
+  "settingsTitle": "Ustawienia",
+  "newCutList": "Nowa lista cięć",
+  "noProjectsTitle": "Brak list cięć",
+  "noProjectsMessage": "Zaplanuj pierwsze zlecenie w mniej niż minutę.",
+  "appVersionLabel": "Wersja aplikacji",
+  "defaultUnits": "Domyślne jednostki",
+  "defaultKerf": "Domyślny rzaz",
+  "theme": "Motyw",
+  "newProjectTitle": "Nowa lista cięć",
+  "projectNameLabel": "Nazwa projektu",
+  "projectNameHint": "Rama garażu",
+  "materialLabel": "Materiał",
+  "materialHint": "Stal 40x20",
+  "noteLabel": "Notatka",
+  "noteHint": "Ściana południowa",
+  "createCutList": "Utwórz listę cięć",
+  "save": "Zapisz",
+  "editDetails": "Edytuj szczegóły",
+  "duplicate": "Duplikuj",
+  "copyLabel": "Kopia",
+  "@copyLabel": {
+    "description": "Suffix for automatically generated duplicate project names."
+  },
+  "delete": "Usuń",
+  "deleteProjectTitle": "Usunąć listę cięć?",
+  "deleteProjectMessage": "„{projectName}” zostanie trwale usunięta z tego urządzenia.",
+  "@deleteProjectMessage": {
+    "placeholders": {
+      "projectName": {
+        "type": "String"
+      }
+    }
+  },
+  "cancel": "Anuluj",
+  "projectDeleted": "Lista cięć usunięta",
+  "projectActions": "Działania dla {projectName}",
+  "@projectActions": {
+    "placeholders": {
+      "projectName": {
+        "type": "String"
+      }
+    }
+  },
+  "updatedLabel": "Zaktualizowano: {date}",
+  "@updatedLabel": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "stockSectionTitle": "Materiał dostępny",
+  "noStockYet": "Nie dodano jeszcze długości materiału.",
+  "partsSectionTitle": "Elementy",
+  "noPartsYet": "Nie dodano jeszcze elementów.",
+  "cutSettingsSectionTitle": "Ustawienia cięcia",
+  "calculate": "Oblicz",
+  "calculateDisabledHint": "Dodaj elementy, aby obliczyć plan cięcia.",
+  "projectNotFound": "Nie znaleziono listy cięć",
+  "backToProjects": "Wróć do list",
+  "projectNameRequired": "Wpisz nazwę projektu.",
+  "projectNameTooLong": "Nazwa projektu może mieć maksymalnie 80 znaków.",
+  "materialTooLong": "Materiał może mieć maksymalnie 120 znaków.",
+  "noteTooLong": "Notatka może mieć maksymalnie 500 znaków.",
+  "projectSaveError": "Nie udało się zapisać listy cięć. Spróbuj ponownie.",
+  "projectDeleteError": "Nie udało się usunąć listy cięć. Spróbuj ponownie.",
+  "projectDuplicateError": "Nie udało się zduplikować listy cięć. Spróbuj ponownie.",
+  "projectsLoadError": "Nie udało się wczytać list cięć.",
+  "projectLoadError": "Nie udało się wczytać tej listy cięć.",
+  "retry": "Spróbuj ponownie",
+  "fixedInventory": "Stały zapas",
+  "buyStock": "Kup materiał",
+  "addStockLength": "Dodaj długość materiału",
+  "editStockLength": "Edytuj długość materiału",
+  "stockLength": "Długość",
+  "quantity": "Ilość",
+  "labelOptional": "Etykieta (opcjonalnie)",
+  "stockLengthHint": "6000",
+  "stockLengthCmHint": "244",
+  "stockLengthMHint": "2,4",
+  "stockLabelHint": "Magazyn",
+  "quantityHint": "10",
+  "stockLengthRequired": "Wpisz długość.",
+  "stockLengthInvalid": "Wpisz liczbę większą od zera.",
+  "stockLengthPrecision": "Tej wartości nie da się zapisać dokładnie. Użyj wielokrotności 0,0001 mm.",
+  "stockLengthTooLarge": "Ta długość jest zbyt duża.",
+  "quantityRequired": "Wpisz ilość.",
+  "quantityInvalid": "Wpisz liczbę całkowitą od 1 do 9999.",
+  "quantityTooLarge": "Ilość nie może przekraczać 9999.",
+  "stockLabelTooLong": "Etykieta może mieć maksymalnie 80 znaków.",
+  "saveStock": "Zapisz długość materiału",
+  "stockSaveError": "Nie udało się zapisać tej długości materiału. Spróbuj ponownie.",
+  "stockDeleteError": "Nie udało się usunąć tej długości materiału. Spróbuj ponownie.",
+  "stockDuplicateError": "Nie udało się zduplikować tej długości materiału. Spróbuj ponownie.",
+  "stockLoadError": "Nie udało się wczytać materiału.",
+  "stockNotFound": "Nie znaleziono długości materiału",
+  "deleteStockTitle": "Usunąć długość materiału?",
+  "deleteStockMessage": "{length} × {quantity} zostanie usunięte z tej listy cięć.",
+  "@deleteStockMessage": {
+    "placeholders": {
+      "length": {
+        "type": "String"
+      },
+      "quantity": {
+        "type": "int"
+      }
+    }
+  },
+  "stockDeleted": "Długość materiału usunięta",
+  "duplicateStock": "Duplikuj długość materiału",
+  "stockSummary": "{count, plural, one{{count} długość materiału} few{{count} długości materiału} many{{count} długości materiału} other{{count} długości materiału}}",
+  "@stockSummary": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "totalPieces": "{count, plural, one{Łącznie {count} sztuka} few{Łącznie {count} sztuki} many{Łącznie {count} sztuk} other{Łącznie {count} sztuki}}",
+  "@totalPieces": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "setBuyStockLength": "Ustaw długość materiału",
+  "buyStockHelper": "Obliczymy, ile sztuk trzeba kupić.",
+  "buyStockLengthMissing": "Ustaw długość materiału, który zamierzasz kupić.",
+  "stockModeSaveError": "Nie udało się zmienić trybu materiału. Spróbuj ponownie.",
+  "backToProject": "Wróć do listy cięć",
+  "decreaseQuantity": "Zmniejsz ilość",
+  "increaseQuantity": "Zwiększ ilość",
+  "unitMm": "mm",
+  "unitCm": "cm",
+  "unitM": "m",
+  "unitInch": "in",
+  "lengthWithUnit": "{value} {unit}",
+  "@lengthWithUnit": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      },
+      "unit": {
+        "type": "String"
+      }
+    }
+  },
+  "approximateLength": "≈ {value}",
+  "@approximateLength": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "stockQuantity": "× {quantity}",
+  "@stockQuantity": {
+    "placeholders": {
+      "quantity": {
+        "type": "int"
+      }
+    }
+  },
+  "stockActions": "Działania dla {length}",
+  "@stockActions": {
+    "placeholders": {
+      "length": {
+        "type": "String"
+      }
+    }
+  },
+  "decimalInchesHelper": "Wpisz cale jako liczbę dziesiętną.",
+  "exactStoredLengthHelper": "Zapisano dokładnie: {value} mm. Wartość w calach jest przybliżona. Zapisana długość pozostaje dokładna, dopóki jej nie edytujesz.",
+  "@exactStoredLengthHelper": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "addPart": "Dodaj element",
+  "editPart": "Edytuj element",
+  "partNameOptional": "Nazwa elementu (opcjonalnie)",
+  "partNameHint": "Słupek",
+  "partNameTooLong": "Nazwa elementu może mieć maksymalnie 100 znaków.",
+  "partSaveError": "Nie udało się zapisać elementu. Spróbuj ponownie.",
+  "partDeleteError": "Nie udało się usunąć elementu. Spróbuj ponownie.",
+  "partDuplicateError": "Nie udało się zduplikować elementu. Spróbuj ponownie.",
+  "partLoadError": "Nie udało się wczytać elementów.",
+  "partNotFound": "Nie znaleziono elementu",
+  "deletePartTitle": "Usunąć element?",
+  "deletePartMessage": "{description} × {quantity} zostanie usunięte z tej listy cięć.",
+  "partDeleted": "Element usunięty",
+  "duplicatePart": "Duplikuj element",
+  "partSummary": "{count, plural, one{{count} pozycja elementów} few{{count} pozycje elementów} many{{count} pozycji elementów} other{{count} pozycji elementów}}",
+  "feet": "Stopy",
+  "inches": "Cale",
+  "wholeInches": "Pełne cale",
+  "fraction": "Ułamek",
+  "inchesRange": "Użyj od 0 do 11 cali. Dodatkowe stopy wpisz w polu Stopy.",
+  "imperialLengthInvalid": "Wpisz nieujemne liczby całkowite i ułamek, których suma jest większa od zera.",
+  "partTooLongWarning": "Ten element jest dłuższy niż największa użyteczna długość materiału ({length}).",
+  "addStockToContinue": "Dodaj materiał, aby kontynuować.",
+  "cutPlanUnavailable": "Plan cięcia nie jest jeszcze dostępny.",
+  "namedPartLength": "{name} — {length}",
+  "@deletePartMessage": {
+    "placeholders": {
+      "description": {
+        "type": "String"
+      },
+      "quantity": {
+        "type": "int"
+      }
+    }
+  },
+  "@namedPartLength": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "length": {
+        "type": "String"
+      }
+    }
+  },
+  "@partSummary": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "@partTooLongWarning": {
+    "placeholders": {
+      "length": {
+        "type": "String"
+      }
+    }
+  },
+  "cutPlanTitle": "Plan cięcia",
+  "calculating": "Obliczanie…",
+  "recalculate": "Oblicz ponownie",
+  "editCutList": "Edytuj listę cięć",
+  "stockPiecesUsed": "{count, plural, one{Użyto {count} sztuki materiału} few{Użyto {count} sztuk materiału} many{Użyto {count} sztuk materiału} other{Użyto {count} sztuki materiału}}",
+  "stockPiecesToBuy": "{count, plural, one{Do kupienia {count} sztuka materiału} few{Do kupienia {count} sztuki materiału} many{Do kupienia {count} sztuk materiału} other{Do kupienia {count} sztuki materiału}}",
+  "buySummary": "Kup {length} × {count}",
+  "requestedParts": "Wymagane elementy",
+  "placedParts": "Przydzielone elementy",
+  "unplacedParts": "Nieprzydzielone elementy",
+  "placedOfRequested": "Przydzielono {placed} z {requested, plural, one{{requested} elementu} few{{requested} elementów} many{{requested} elementów} other{{requested} elementu}}",
+  "totalFinishedLength": "Łączna długość gotowych elementów",
+  "totalStockUsed": "Łączna długość użytego materiału",
+  "totalWaste": "Łączny odpad",
+  "wastePercentage": "Odpad: {value}%",
+  "reusableLeftovers": "Pozostałości do ponownego użycia",
+  "scrap": "Odpad",
+  "kerfLoss": "Strata na rzaz",
+  "trimLoss": "Strata na obcięcie końców",
+  "reusable": "Do ponownego użycia",
+  "leftover": "Pozostałość",
+  "reusableExplanation": "Do ponownego użycia: końcówki co najmniej {threshold}. Odpad obejmuje rzaz, obcięte końce i krótsze pozostałości.",
+  "resultMetric": "{label}: {value}",
+  "barTitle": "Pręt {number} · {length}",
+  "partsOnBar": "{count, plural, one{{count} element} few{{count} elementy} many{{count} elementów} other{{count} elementu}}",
+  "classifiedLeftover": "{length} · {classification}",
+  "cutOrderPart": "{number}. {description}",
+  "endTrimPerEnd": "Obcięcie końców: {length} na każdy koniec",
+  "barDiagramDescription": "Pręt materiału {number}, {length}, {parts}, pozostałość {tail}.",
+  "unplacedCount": "Nieprzydzielone elementy ({count})",
+  "lengthQuantity": "{length} × {quantity}",
+  "inventoryExhaustedResultReason": "Nie ma dość materiału na ten element.",
+  "resultLoadError": "Nie udało się obliczyć tej listy cięć.",
+  "resultValidationError": "Przed obliczeniem sprawdź materiał, elementy i ustawienia cięcia.",
+  "stockTooShortAfterTrim": "Materiał jest zbyt krótki po obcięciu końców.",
+  "validBuyStockRequired": "Przed obliczeniem ustaw poprawną długość materiału.",
+  "tooLongResultReason": "Ten element jest dłuższy niż największa użyteczna długość materiału.",
+  "@stockPiecesUsed": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "@stockPiecesToBuy": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "@buySummary": {
+    "placeholders": {
+      "length": {
+        "type": "String"
+      },
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "@placedOfRequested": {
+    "placeholders": {
+      "placed": {
+        "type": "int"
+      },
+      "requested": {
+        "type": "int"
+      }
+    }
+  },
+  "@wastePercentage": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "@reusableExplanation": {
+    "placeholders": {
+      "threshold": {
+        "type": "String"
+      }
+    }
+  },
+  "@resultMetric": {
+    "placeholders": {
+      "label": {
+        "type": "String"
+      },
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "@barTitle": {
+    "placeholders": {
+      "number": {
+        "type": "int"
+      },
+      "length": {
+        "type": "String"
+      }
+    }
+  },
+  "@partsOnBar": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "@classifiedLeftover": {
+    "placeholders": {
+      "length": {
+        "type": "String"
+      },
+      "classification": {
+        "type": "String"
+      }
+    }
+  },
+  "@cutOrderPart": {
+    "placeholders": {
+      "number": {
+        "type": "int"
+      },
+      "description": {
+        "type": "String"
+      }
+    }
+  },
+  "@endTrimPerEnd": {
+    "placeholders": {
+      "length": {
+        "type": "String"
+      }
+    }
+  },
+  "@barDiagramDescription": {
+    "placeholders": {
+      "number": {
+        "type": "int"
+      },
+      "length": {
+        "type": "String"
+      },
+      "parts": {
+        "type": "String"
+      },
+      "tail": {
+        "type": "String"
+      }
+    }
+  },
+  "@unplacedCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "@lengthQuantity": {
+    "placeholders": {
+      "length": {
+        "type": "String"
+      },
+      "quantity": {
+        "type": "int"
+      }
+    }
+  },
+  "editCutSettings": "Edytuj ustawienia cięcia",
+  "units": "Jednostki",
+  "unitFtIn": "ft + in",
+  "millimeters": "Milimetry",
+  "centimeters": "Centymetry",
+  "meters": "Metry",
+  "feetAndInches": "Stopy i cale",
+  "kerf": "Rzaz",
+  "kerfHelper": "Materiał usuwany między kolejnymi elementami.",
+  "kerfFinalPartHelper": "Po ostatnim elemencie na pręcie nie dolicza się rzazu.",
+  "endTrimEachEnd": "Obcięcie końców (na każdy koniec)",
+  "endTrimHelper": "Odetnij tę długość z każdego końca każdego pręta.",
+  "reusableLeftover": "Pozostałość do ponownego użycia",
+  "reusableLeftoverHelper": "Pozostałości o tej długości lub dłuższe można wykorzystać ponownie.",
+  "cutSettingsSaveError": "Nie udało się zapisać ustawień cięcia. Spróbuj ponownie.",
+  "noUsableStockAfterTrim": "Po obcięciu końców nie zostaje użyteczna długość materiału.",
+  "someStockUnusableAfterTrim": "Niektóre pręty są zbyt krótkie po obcięciu końców.",
+  "nonnegativeLengthInvalid": "Wpisz liczbę większą lub równą zeru.",
+  "nonnegativeImperialInvalid": "Wpisz nieujemne liczby całkowite i ułamek.",
+  "share": "Udostępnij",
+  "shareCutPlan": "Udostępnij plan cięcia",
+  "shareText": "Udostępnij tekst",
+  "sharePdf": "Udostępnij PDF",
+  "copyBuyList": "Kopiuj listę zakupów",
+  "buyListCopied": "Lista zakupów skopiowana",
+  "creatingPdf": "Tworzenie PDF…",
+  "pdfCreateError": "Nie udało się utworzyć pliku PDF. Spróbuj ponownie.",
+  "shareError": "Nie udało się udostępnić planu cięcia. Spróbuj ponownie.",
+  "buyListCopyError": "Nie udało się skopiować listy zakupów. Spróbuj ponownie.",
+  "reportSummary": "Podsumowanie",
+  "reportPurchase": "Zakup",
+  "generatedLabel": "Wygenerowano",
+  "generatedBy": "Wygenerowano w {appName}",
+  "@generatedBy": {
+    "placeholders": {
+      "appName": {
+        "type": "String"
+      }
+    }
+  },
+  "verifyBeforeCutting": "Plany cięcia służą do planowania. Przed cięciem sprawdź każdy wymiar na materiale i przestrzegaj zasad bezpiecznej pracy z narzędziami.",
+  "reportFileFallback": "Plan cięcia",
+  "addLeftoversToStock": "Dodaj pozostałości do zapasu",
+  "addLeftoversTitle": "Dodać pozostałości do zapasu?",
+  "addLeftoversMessage": "Te pozostałości nadające się do ponownego użycia zostaną dodane do stałego zapasu projektu na przyszłe plany cięcia.",
+  "addLeftoversFutureHint": "Dodaj je po wykonaniu cięć.",
+  "addToStock": "Dodaj do zapasu",
+  "leftoversAddedToStock": "Pozostałości dodano do zapasu na przyszłe plany cięcia.",
+  "leftoversAddError": "Nie udało się dodać pozostałości. Spróbuj ponownie.",
+  "reusablePieces": "{count, plural, one{{count} sztuka do ponownego użycia} few{{count} sztuki do ponownego użycia} many{{count} sztuk do ponownego użycia} other{{count} sztuki do ponownego użycia}}",
+  "@reusablePieces": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "saveAndAddAnother": "Zapisz i dodaj kolejny",
+  "defaultsSectionTitle": "Wartości domyślne",
+  "appearanceSectionTitle": "Wygląd",
+  "defaultReusableLeftover": "Domyślna pozostałość do ponownego użycia",
+  "newProjectsDefaultsHelper": "Te wartości dotyczą nowych list cięć. Istniejące listy nie zostaną zmienione.",
+  "defaultReusableHelper": "W nowych projektach pozostałości o tej długości lub dłuższe nadają się do ponownego użycia.",
+  "themeSystem": "Systemowy",
+  "themeLight": "Jasny",
+  "themeDark": "Ciemny",
+  "settingsSaveError": "Nie udało się zapisać ustawień. Spróbuj ponownie.",
+  "settingsLoadError": "Nie udało się wczytać ustawień.",
+  "settingsSaved": "Ustawienia zapisane",
+  "language": "Język",
+  "languageSystem": "Język systemowy",
+  "languageEnglish": "English",
+  "languageSpanish": "Español",
+  "languageGerman": "Deutsch",
+  "languageFrench": "Français",
+  "languagePortugueseBrazil": "Português (Brasil)",
+  "languageItalian": "Italiano",
+  "languagePolish": "Polski",
+  "languageRussian": "Русский",
+  "languageTurkish": "Türkçe",
+  "languageUkrainian": "Українська",
+  "proTitle": "KerfPlan Pro",
+  "upgradeOnce": "Kup raz. Korzystaj bezterminowo.",
+  "noSubscription": "Bez abonamentu.",
+  "lifetimePro": "Pro na zawsze",
+  "removeAds": "Usuń reklamy",
+  "unlockLifetimePro": "Odblokuj Pro na zawsze — {price}",
+  "@unlockLifetimePro": {
+    "placeholders": {
+      "price": {
+        "type": "String"
+      }
+    }
+  },
+  "removeAdsCta": "Usuń reklamy — {price}",
+  "@removeAdsCta": {
+    "placeholders": {
+      "price": {
+        "type": "String"
+      }
+    }
+  },
+  "proActive": "Pro na zawsze aktywne",
+  "adFreeActive": "Bez reklam",
+  "includedWithPro": "Wliczone w Pro na zawsze",
+  "removeAdsDescription": "Zachowaj darmowe funkcje i usuń reklamy.",
+  "restorePurchases": "Przywróć zakupy",
+  "restoringPurchases": "Przywracanie zakupów…",
+  "purchasesRestored": "Zakupy przywrócone",
+  "lifetimeProRestored": "Pro na zawsze przywrócone",
+  "adFreeRestored": "Wersja bez reklam przywrócona",
+  "nothingToRestore": "Brak zakupów do przywrócenia",
+  "purchasePending": "Zakup oczekuje",
+  "purchasePendingMessage": "Google Play jeszcze przetwarza płatność za ten zakup.",
+  "purchaseError": "Nie udało się sfinalizować zakupu. Spróbuj ponownie.",
+  "restoreError": "Nie udało się przywrócić zakupów. Spróbuj ponownie.",
+  "billingUnavailable": "Zakupy są teraz niedostępne.",
+  "productUnavailable": "Chwilowo niedostępne.",
+  "processingPurchase": "Weryfikowanie zakupu…",
+  "purchaseVerified": "Zakup zweryfikowany",
+  "kerfPlanFree": "KerfPlan Bezpłatny",
+  "viewPro": "Zobacz Pro",
+  "upgrade": "Ulepsz",
+  "benefitUnlimitedProjects": "Nieograniczone listy cięć",
+  "benefitMultipleStocks": "Wiele długości materiału",
+  "benefitPdf": "Eksport PDF do warsztatu",
+  "benefitReuseLeftovers": "Ponowne użycie pozostałości",
+  "benefitNoAds": "Bez reklam",
+  "onboardingIntro": "Planuj cięcia liniowe z mniejszą ilością odpadów.",
+  "howDoYouMeasure": "Jak mierzysz?",
+  "metric": "Metryczny",
+  "imperial": "Imperialny",
+  "metricDescription": "Milimetry, centymetry i metry",
+  "imperialDescription": "Cale i stopy",
+  "recommendedForRegion": "Zalecane dla Twojego regionu",
+  "continueAction": "Kontynuuj",
+  "measurementCanChangeLater": "Możesz to później zmienić w Ustawieniach.",
+  "measurements": "Pomiary",
+  "measurementSystem": "System miar",
+  "commonLengths": "Typowe długości"
+}

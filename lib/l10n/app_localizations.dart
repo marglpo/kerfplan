@@ -5,7 +5,16 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:intl/intl.dart' as intl;
 
+import 'app_localizations_de.dart';
 import 'app_localizations_en.dart';
+import 'app_localizations_es.dart';
+import 'app_localizations_fr.dart';
+import 'app_localizations_it.dart';
+import 'app_localizations_pl.dart';
+import 'app_localizations_pt.dart';
+import 'app_localizations_ru.dart';
+import 'app_localizations_tr.dart';
+import 'app_localizations_uk.dart';
 
 // ignore_for_file: type=lint
 
@@ -92,7 +101,19 @@ abstract class AppLocalizations {
       ];
 
   /// A list of this localizations delegate's supported locales.
-  static const List<Locale> supportedLocales = <Locale>[Locale('en')];
+  static const List<Locale> supportedLocales = <Locale>[
+    Locale('de'),
+    Locale('en'),
+    Locale('es'),
+    Locale('fr'),
+    Locale('it'),
+    Locale('pl'),
+    Locale('pt'),
+    Locale('pt', 'BR'),
+    Locale('ru'),
+    Locale('tr'),
+    Locale('uk'),
+  ];
 
   /// No description provided for @appName.
   ///
@@ -429,6 +450,18 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'6000'**
   String get stockLengthHint;
+
+  /// No description provided for @stockLengthCmHint.
+  ///
+  /// In en, this message translates to:
+  /// **'244'**
+  String get stockLengthCmHint;
+
+  /// No description provided for @stockLengthMHint.
+  ///
+  /// In en, this message translates to:
+  /// **'2.4'**
+  String get stockLengthMHint;
 
   /// No description provided for @stockLabelHint.
   ///
@@ -877,7 +910,7 @@ abstract class AppLocalizations {
   /// No description provided for @placedOfRequested.
   ///
   /// In en, this message translates to:
-  /// **'Placed {placed} of {requested} parts'**
+  /// **'Placed {placed} of {requested, plural, =1{1 part} other{{requested} parts}}'**
   String placedOfRequested(int placed, int requested);
 
   /// No description provided for @totalFinishedLength.
@@ -1371,6 +1404,78 @@ abstract class AppLocalizations {
   /// **'Settings saved'**
   String get settingsSaved;
 
+  /// No description provided for @language.
+  ///
+  /// In en, this message translates to:
+  /// **'Language'**
+  String get language;
+
+  /// No description provided for @languageSystem.
+  ///
+  /// In en, this message translates to:
+  /// **'System default'**
+  String get languageSystem;
+
+  /// No description provided for @languageEnglish.
+  ///
+  /// In en, this message translates to:
+  /// **'English'**
+  String get languageEnglish;
+
+  /// No description provided for @languageSpanish.
+  ///
+  /// In en, this message translates to:
+  /// **'Español'**
+  String get languageSpanish;
+
+  /// No description provided for @languageGerman.
+  ///
+  /// In en, this message translates to:
+  /// **'Deutsch'**
+  String get languageGerman;
+
+  /// No description provided for @languageFrench.
+  ///
+  /// In en, this message translates to:
+  /// **'Français'**
+  String get languageFrench;
+
+  /// No description provided for @languagePortugueseBrazil.
+  ///
+  /// In en, this message translates to:
+  /// **'Português (Brasil)'**
+  String get languagePortugueseBrazil;
+
+  /// No description provided for @languageItalian.
+  ///
+  /// In en, this message translates to:
+  /// **'Italiano'**
+  String get languageItalian;
+
+  /// No description provided for @languagePolish.
+  ///
+  /// In en, this message translates to:
+  /// **'Polski'**
+  String get languagePolish;
+
+  /// No description provided for @languageRussian.
+  ///
+  /// In en, this message translates to:
+  /// **'Русский'**
+  String get languageRussian;
+
+  /// No description provided for @languageTurkish.
+  ///
+  /// In en, this message translates to:
+  /// **'Türkçe'**
+  String get languageTurkish;
+
+  /// No description provided for @languageUkrainian.
+  ///
+  /// In en, this message translates to:
+  /// **'Українська'**
+  String get languageUkrainian;
+
   /// No description provided for @proTitle.
   ///
   /// In en, this message translates to:
@@ -1568,6 +1673,78 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'No ads'**
   String get benefitNoAds;
+
+  /// No description provided for @onboardingIntro.
+  ///
+  /// In en, this message translates to:
+  /// **'Plan linear cuts with less waste.'**
+  String get onboardingIntro;
+
+  /// No description provided for @howDoYouMeasure.
+  ///
+  /// In en, this message translates to:
+  /// **'How do you measure?'**
+  String get howDoYouMeasure;
+
+  /// No description provided for @metric.
+  ///
+  /// In en, this message translates to:
+  /// **'Metric'**
+  String get metric;
+
+  /// No description provided for @imperial.
+  ///
+  /// In en, this message translates to:
+  /// **'Imperial'**
+  String get imperial;
+
+  /// No description provided for @metricDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Millimeters, centimeters and meters'**
+  String get metricDescription;
+
+  /// No description provided for @imperialDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Inches and feet'**
+  String get imperialDescription;
+
+  /// No description provided for @recommendedForRegion.
+  ///
+  /// In en, this message translates to:
+  /// **'Recommended for your region'**
+  String get recommendedForRegion;
+
+  /// No description provided for @continueAction.
+  ///
+  /// In en, this message translates to:
+  /// **'Continue'**
+  String get continueAction;
+
+  /// No description provided for @measurementCanChangeLater.
+  ///
+  /// In en, this message translates to:
+  /// **'You can change this later in Settings.'**
+  String get measurementCanChangeLater;
+
+  /// No description provided for @measurements.
+  ///
+  /// In en, this message translates to:
+  /// **'Measurements'**
+  String get measurements;
+
+  /// No description provided for @measurementSystem.
+  ///
+  /// In en, this message translates to:
+  /// **'Measurement system'**
+  String get measurementSystem;
+
+  /// No description provided for @commonLengths.
+  ///
+  /// In en, this message translates to:
+  /// **'Common lengths'**
+  String get commonLengths;
 }
 
 class _AppLocalizationsDelegate
@@ -1580,18 +1757,58 @@ class _AppLocalizationsDelegate
   }
 
   @override
-  bool isSupported(Locale locale) =>
-      <String>['en'].contains(locale.languageCode);
+  bool isSupported(Locale locale) => <String>[
+    'de',
+    'en',
+    'es',
+    'fr',
+    'it',
+    'pl',
+    'pt',
+    'ru',
+    'tr',
+    'uk',
+  ].contains(locale.languageCode);
 
   @override
   bool shouldReload(_AppLocalizationsDelegate old) => false;
 }
 
 AppLocalizations lookupAppLocalizations(Locale locale) {
+  // Lookup logic when language+country codes are specified.
+  switch (locale.languageCode) {
+    case 'pt':
+      {
+        switch (locale.countryCode) {
+          case 'BR':
+            return AppLocalizationsPtBr();
+        }
+        break;
+      }
+  }
+
   // Lookup logic when only language code is specified.
   switch (locale.languageCode) {
+    case 'de':
+      return AppLocalizationsDe();
     case 'en':
       return AppLocalizationsEn();
+    case 'es':
+      return AppLocalizationsEs();
+    case 'fr':
+      return AppLocalizationsFr();
+    case 'it':
+      return AppLocalizationsIt();
+    case 'pl':
+      return AppLocalizationsPl();
+    case 'pt':
+      return AppLocalizationsPt();
+    case 'ru':
+      return AppLocalizationsRu();
+    case 'tr':
+      return AppLocalizationsTr();
+    case 'uk':
+      return AppLocalizationsUk();
   }
 
   throw FlutterError(
